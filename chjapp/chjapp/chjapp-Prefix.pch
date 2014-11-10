@@ -18,6 +18,6 @@
 #import "CommonDefine.h"
 #import "ViewUtils.h"
 #import "MJRefresh.h"
-#import "PHttpRequestHeaders.h"
+#import "CHJRequesHeaders.h"
 #import "CommonBlock.h"
 #endif

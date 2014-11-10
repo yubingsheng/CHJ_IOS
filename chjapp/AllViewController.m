@@ -8,17 +8,61 @@
 
 #import "AllViewController.h"
 
-@interface AllViewController ()
-
+@interface AllViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (strong,nonatomic)UITableView *tableView;
 @end
 
 @implementation AllViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets=NO;
+    [self addTableView];
     // Do any additional setup after loading the view.
 }
-
+#pragma mark -addViews
+-(void)addTableView
+{
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64, Main_Screen_Width, Main_Screen_Height-64-44)];
+    _tableView.delegate=self;
+    _tableView.dataSource=self;
+    [_tableView addHeaderWithTarget:self action:@selector(headerRefresh)];
+    [_tableView addFooterWithTarget:self action:@selector(footerRefresh)];
+    [self.view addSubview:_tableView];
+}
+-(void)headerRefresh
+{
+    [_tableView footerEndRefreshing];
+}
+-(void)footerRefresh
+{
+    [_tableView headerEndRefreshing];
+}
+#pragma mark- TableViewDelegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+}
+#pragma mark - TableViewDataSource
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *str=@"cell";
+    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:str];
+    if (cell==nil)
+    {
+        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+    }
+    NSDate *  senddate=[NSDate date];
+    NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
+    [dateformatter setDateFormat:@"HH:mm"];
+    NSString *  locationString=[dateformatter stringFromDate:senddate];
+    
+    cell.textLabel.text=[NSString stringWithFormat:@"%@",locationString];
+    return cell;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 24;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -21,7 +21,20 @@
 }
 - (IBAction)loginBtn:(UIButton *)sender
 {
-    
+    CHJRequestUrl *request=[CHJRequest loginRequestWithSoapBody:@"<GetModelByENameAndEPassword2 xmlns=\"http://www.woowei.cn/\">\n"
+                         "<EName>方银儿</EName>\n"
+                         "<EPassword>123456</EPassword>\n"
+                         "</GetModelByENameAndEPassword2>\n"];
+    CHJRequestoperation *operation=[[CHJRequestoperation alloc]initWithRequest:request success:^(id result){
+        UIStoryboard *sb=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        CustomTabbarController *vc=[sb instantiateViewControllerWithIdentifier:@"tabbar"];
+        [self presentViewController:vc animated:YES completion:nil];
+        
+    } failure:^(NSError *error){
+        
+    }];
+    [operation startWithHUD:@"登录" inView:self.view];
 }
 
 - (void)didReceiveMemoryWarning
