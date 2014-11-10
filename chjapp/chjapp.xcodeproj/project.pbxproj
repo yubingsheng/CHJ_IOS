@@ -78,7 +78,6 @@
 		2D3175161A0F6A7800ED1599 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3175141A0F6A7800ED1599 /* MyViewController.m */; };
 		2D31751C1A0F6B7D00ED1599 /* AllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D31751B1A0F6B7D00ED1599 /* AllViewController.m */; };
 		2D3175201A0F6C0000ED1599 /* FollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D31751F1A0F6C0000ED1599 /* FollowViewController.m */; };
-		2D3175241A0F6C4100ED1599 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3175231A0F6C4100ED1599 /* SettingViewController.m */; };
 		2D3175271A0F6D5B00ED1599 /* CustomTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3175261A0F6D5B00ED1599 /* CustomTabbarController.m */; };
 		2D31752B1A0F717900ED1599 /* all-x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D31752A1A0F717900ED1599 /* all-x@2x.png */; };
 		2D31752D1A0F73BB00ED1599 /* mine-x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D31752C1A0F73BB00ED1599 /* mine-x@2x.png */; };
@@ -100,6 +99,16 @@
 		3BA2BCCC1A0F632100D8B186 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA2BCAE1A0F632100D8B186 /* UIKit.framework */; };
 		3BA2BCD41A0F632100D8B186 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BA2BCD21A0F632100D8B186 /* InfoPlist.strings */; };
 		3BA2BCD61A0F632100D8B186 /* chjappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2BCD51A0F632100D8B186 /* chjappTests.m */; };
+		D27C22BA1A105D820017F970 /* SetRemind_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C22B81A105D820017F970 /* SetRemind_TableViewController.m */; };
+		D27C22BB1A105D820017F970 /* SetRemind_TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27C22B91A105D820017F970 /* SetRemind_TableViewController.xib */; };
+		D27C22BF1A105D930017F970 /* SetAttention_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C22BD1A105D930017F970 /* SetAttention_TableViewController.m */; };
+		D27C22C01A105D930017F970 /* SetAttention_TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27C22BE1A105D930017F970 /* SetAttention_TableViewController.xib */; };
+		D27C22C41A105DA10017F970 /* SetLock_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C22C21A105DA10017F970 /* SetLock_TableViewController.m */; };
+		D27C22C51A105DA10017F970 /* SetLock_TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27C22C31A105DA10017F970 /* SetLock_TableViewController.xib */; };
+		D27C22C81A105EC00017F970 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C22C71A105EC00017F970 /* SettingTableViewController.m */; };
+		D27C22CC1A106A0D0017F970 /* SetAbout_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C22CA1A106A0D0017F970 /* SetAbout_ViewController.m */; };
+		D27C22CD1A106A0D0017F970 /* SetAbout_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27C22CB1A106A0D0017F970 /* SetAbout_ViewController.xib */; };
+		D27C22D11A107C470017F970 /* okicon.png in Resources */ = {isa = PBXBuildFile; fileRef = D27C22D01A107C470017F970 /* okicon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -254,8 +263,6 @@
 		2D31751B1A0F6B7D00ED1599 /* AllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllViewController.m; sourceTree = "<group>"; };
 		2D31751E1A0F6C0000ED1599 /* FollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowViewController.h; sourceTree = "<group>"; };
 		2D31751F1A0F6C0000ED1599 /* FollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowViewController.m; sourceTree = "<group>"; };
-		2D3175221A0F6C4100ED1599 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
-		2D3175231A0F6C4100ED1599 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		2D3175251A0F6D5B00ED1599 /* CustomTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabbarController.h; sourceTree = "<group>"; };
 		2D3175261A0F6D5B00ED1599 /* CustomTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabbarController.m; sourceTree = "<group>"; };
 		2D31752A1A0F717900ED1599 /* all-x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all-x@2x.png"; sourceTree = "<group>"; };
@@ -283,6 +290,21 @@
 		3BA2BCD11A0F632100D8B186 /* chjappTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "chjappTests-Info.plist"; sourceTree = "<group>"; };
 		3BA2BCD31A0F632100D8B186 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3BA2BCD51A0F632100D8B186 /* chjappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chjappTests.m; sourceTree = "<group>"; };
+		D27C22B71A105D820017F970 /* SetRemind_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetRemind_TableViewController.h; sourceTree = "<group>"; };
+		D27C22B81A105D820017F970 /* SetRemind_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetRemind_TableViewController.m; sourceTree = "<group>"; };
+		D27C22B91A105D820017F970 /* SetRemind_TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetRemind_TableViewController.xib; sourceTree = "<group>"; };
+		D27C22BC1A105D930017F970 /* SetAttention_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetAttention_TableViewController.h; sourceTree = "<group>"; };
+		D27C22BD1A105D930017F970 /* SetAttention_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetAttention_TableViewController.m; sourceTree = "<group>"; };
+		D27C22BE1A105D930017F970 /* SetAttention_TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetAttention_TableViewController.xib; sourceTree = "<group>"; };
+		D27C22C11A105DA10017F970 /* SetLock_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetLock_TableViewController.h; sourceTree = "<group>"; };
+		D27C22C21A105DA10017F970 /* SetLock_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetLock_TableViewController.m; sourceTree = "<group>"; };
+		D27C22C31A105DA10017F970 /* SetLock_TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetLock_TableViewController.xib; sourceTree = "<group>"; };
+		D27C22C61A105EC00017F970 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		D27C22C71A105EC00017F970 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		D27C22C91A106A0D0017F970 /* SetAbout_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetAbout_ViewController.h; sourceTree = "<group>"; };
+		D27C22CA1A106A0D0017F970 /* SetAbout_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetAbout_ViewController.m; sourceTree = "<group>"; };
+		D27C22CB1A106A0D0017F970 /* SetAbout_ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetAbout_ViewController.xib; sourceTree = "<group>"; };
+		D27C22D01A107C470017F970 /* okicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = okicon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -604,8 +626,21 @@
 		2D3175211A0F6C2C00ED1599 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				2D3175221A0F6C4100ED1599 /* SettingViewController.h */,
-				2D3175231A0F6C4100ED1599 /* SettingViewController.m */,
+				D27C22D01A107C470017F970 /* okicon.png */,
+				D27C22C61A105EC00017F970 /* SettingTableViewController.h */,
+				D27C22C71A105EC00017F970 /* SettingTableViewController.m */,
+				D27C22B71A105D820017F970 /* SetRemind_TableViewController.h */,
+				D27C22B81A105D820017F970 /* SetRemind_TableViewController.m */,
+				D27C22B91A105D820017F970 /* SetRemind_TableViewController.xib */,
+				D27C22BC1A105D930017F970 /* SetAttention_TableViewController.h */,
+				D27C22BD1A105D930017F970 /* SetAttention_TableViewController.m */,
+				D27C22BE1A105D930017F970 /* SetAttention_TableViewController.xib */,
+				D27C22C11A105DA10017F970 /* SetLock_TableViewController.h */,
+				D27C22C21A105DA10017F970 /* SetLock_TableViewController.m */,
+				D27C22C31A105DA10017F970 /* SetLock_TableViewController.xib */,
+				D27C22C91A106A0D0017F970 /* SetAbout_ViewController.h */,
+				D27C22CA1A106A0D0017F970 /* SetAbout_ViewController.m */,
+				D27C22CB1A106A0D0017F970 /* SetAbout_ViewController.xib */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -762,6 +797,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D27C22CD1A106A0D0017F970 /* SetAbout_ViewController.xib in Resources */,
+				D27C22C01A105D930017F970 /* SetAttention_TableViewController.xib in Resources */,
 				3BA2BCC31A0F632100D8B186 /* Images.xcassets in Resources */,
 				2D31742C1A0F63E400ED1599 /* Default-568h@2x.png in Resources */,
 				2D31752F1A0F73DE00ED1599 /* setupx@2x.png in Resources */,
@@ -771,12 +808,15 @@
 				2D3174601A0F652200ED1599 /* MJRefresh.bundle in Resources */,
 				3BA2BCB51A0F632100D8B186 /* InfoPlist.strings in Resources */,
 				2D3175311A0F744B00ED1599 /* other-x@2x.png in Resources */,
+				D27C22BB1A105D820017F970 /* SetRemind_TableViewController.xib in Resources */,
+				D27C22D11A107C470017F970 /* okicon.png in Resources */,
 				2D3174871A0F652B00ED1599 /* IQKeyboardManager.bundle in Resources */,
 				2D31752D1A0F73BB00ED1599 /* mine-x@2x.png in Resources */,
 				2D3175351A0F757100ED1599 /* addx@2x.png in Resources */,
 				2D3174F71A0F654400ED1599 /* LICENSE in Resources */,
 				3BA2BCBE1A0F632100D8B186 /* Main.storyboard in Resources */,
 				2D31743B1A0F645600ED1599 /* LICENSE in Resources */,
+				D27C22C51A105DA10017F970 /* SetLock_TableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,6 +844,7 @@
 				2D3174921A0F652B00ED1599 /* LICENSE.md in Sources */,
 				2D31748A1A0F652B00ED1599 /* IQNSArray+Sort.m in Sources */,
 				2D31748E1A0F652B00ED1599 /* IQToolbar.m in Sources */,
+				D27C22BF1A105D930017F970 /* SetAttention_TableViewController.m in Sources */,
 				2D3174BF1A0F653B00ED1599 /* UIButton+WebCache.m in Sources */,
 				2D3174401A0F64C400ED1599 /* ViewUtils.m in Sources */,
 				2D3174F91A0F654400ED1599 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -836,6 +877,7 @@
 				2D3174891A0F652B00ED1599 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				2D31750B1A0F659200ED1599 /* IHGHttpRequest.m in Sources */,
 				2D3174621A0F652200ED1599 /* MJRefreshConst.m in Sources */,
+				D27C22C41A105DA10017F970 /* SetLock_TableViewController.m in Sources */,
 				3BA2BCBB1A0F632100D8B186 /* AppDelegate.m in Sources */,
 				2D3174931A0F652B00ED1599 /* README.md in Sources */,
 				2D3175201A0F6C0000ED1599 /* FollowViewController.m in Sources */,
@@ -844,6 +886,7 @@
 				2D31748F1A0F652B00ED1599 /* IQUIView+Hierarchy.m in Sources */,
 				2D3174EE1A0F654400ED1599 /* AFHTTPRequestOperation.m in Sources */,
 				2D3174F01A0F654400ED1599 /* AFHTTPSessionManager.m in Sources */,
+				D27C22CC1A106A0D0017F970 /* SetAbout_ViewController.m in Sources */,
 				2D3175001A0F654400ED1599 /* UIWebView+AFNetworking.m in Sources */,
 				2D31748C1A0F652B00ED1599 /* IQTextView.m in Sources */,
 				2D3174B71A0F653B00ED1599 /* NSData+ImageContentType.m in Sources */,
@@ -852,7 +895,6 @@
 				2D3174FE1A0F654400ED1599 /* UIProgressView+AFNetworking.m in Sources */,
 				2D3174FC1A0F654400ED1599 /* UIButton+AFNetworking.m in Sources */,
 				2D3174661A0F652200ED1599 /* UIScrollView+MJRefresh.m in Sources */,
-				2D3175241A0F6C4100ED1599 /* SettingViewController.m in Sources */,
 				2D3174671A0F652200ED1599 /* UIView+MJExtension.m in Sources */,
 				2D3174631A0F652200ED1599 /* MJRefreshFooterView.m in Sources */,
 				2D3174911A0F652B00ED1599 /* IQUIWindow+Hierarchy.m in Sources */,
@@ -864,6 +906,8 @@
 				2D3174F31A0F654400ED1599 /* AFURLConnectionOperation.m in Sources */,
 				2D31751C1A0F6B7D00ED1599 /* AllViewController.m in Sources */,
 				2D3174C31A0F653B00ED1599 /* UIImageView+WebCache.m in Sources */,
+				D27C22BA1A105D820017F970 /* SetRemind_TableViewController.m in Sources */,
+				D27C22C81A105EC00017F970 /* SettingTableViewController.m in Sources */,
 				2D3174B81A0F653B00ED1599 /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
