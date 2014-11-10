@@ -100,6 +100,7 @@
 		3BA2BCCC1A0F632100D8B186 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA2BCAE1A0F632100D8B186 /* UIKit.framework */; };
 		3BA2BCD41A0F632100D8B186 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BA2BCD21A0F632100D8B186 /* InfoPlist.strings */; };
 		3BA2BCD61A0F632100D8B186 /* chjappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2BCD51A0F632100D8B186 /* chjappTests.m */; };
+		3BA4EAAE1A10AFD800AB8C26 /* AddActivity ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4EAAD1A10AFD800AB8C26 /* AddActivity ViewController.m */; };
 		D27C22BA1A105D820017F970 /* SetRemind_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C22B81A105D820017F970 /* SetRemind_TableViewController.m */; };
 		D27C22BB1A105D820017F970 /* SetRemind_TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27C22B91A105D820017F970 /* SetRemind_TableViewController.xib */; };
 		D27C22BF1A105D930017F970 /* SetAttention_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C22BD1A105D930017F970 /* SetAttention_TableViewController.m */; };
@@ -293,6 +294,8 @@
 		3BA2BCD11A0F632100D8B186 /* chjappTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "chjappTests-Info.plist"; sourceTree = "<group>"; };
 		3BA2BCD31A0F632100D8B186 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3BA2BCD51A0F632100D8B186 /* chjappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chjappTests.m; sourceTree = "<group>"; };
+		3BA4EAAC1A10AFD800AB8C26 /* AddActivity ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AddActivity ViewController.h"; sourceTree = "<group>"; };
+		3BA4EAAD1A10AFD800AB8C26 /* AddActivity ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AddActivity ViewController.m"; sourceTree = "<group>"; };
 		D27C22B71A105D820017F970 /* SetRemind_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetRemind_TableViewController.h; sourceTree = "<group>"; };
 		D27C22B81A105D820017F970 /* SetRemind_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetRemind_TableViewController.m; sourceTree = "<group>"; };
 		D27C22B91A105D820017F970 /* SetRemind_TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetRemind_TableViewController.xib; sourceTree = "<group>"; };
@@ -606,6 +609,8 @@
 			children = (
 				2D3175131A0F6A7800ED1599 /* MyViewController.h */,
 				2D3175141A0F6A7800ED1599 /* MyViewController.m */,
+				3BA4EAAC1A10AFD800AB8C26 /* AddActivity ViewController.h */,
+				3BA4EAAD1A10AFD800AB8C26 /* AddActivity ViewController.m */,
 			);
 			name = My;
 			sourceTree = "<group>";
@@ -880,6 +885,7 @@
 				2D3174F11A0F654400ED1599 /* AFNetworkReachabilityManager.m in Sources */,
 				2D31748B1A0F652B00ED1599 /* IQSegmentedNextPrevious.m in Sources */,
 				2D3174901A0F652B00ED1599 /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				3BA4EAAE1A10AFD800AB8C26 /* AddActivity ViewController.m in Sources */,
 				2D3174891A0F652B00ED1599 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				2D31750B1A0F659200ED1599 /* IHGHttpRequest.m in Sources */,
 				2D3174621A0F652200ED1599 /* MJRefreshConst.m in Sources */,
