@@ -82,6 +82,16 @@
 		2D38E1801A10F4B90039F7E4 /* CHJRequestoperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D38E17F1A10F4B90039F7E4 /* CHJRequestoperation.m */; };
 		2D38E1831A10F8690039F7E4 /* CHJRequestUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D38E1821A10F8690039F7E4 /* CHJRequestUrl.m */; };
 		2D4D8FFB1A10AEA1009B5CE4 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D8FFA1A10AEA1009B5CE4 /* Product.m */; };
+		2D507F6D1A11B53800B669FC /* okicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D507F5E1A11B53800B669FC /* okicon.png */; };
+		2D507F6E1A11B53800B669FC /* SetAbout_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D507F601A11B53800B669FC /* SetAbout_ViewController.m */; };
+		2D507F6F1A11B53800B669FC /* SetAbout_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D507F611A11B53800B669FC /* SetAbout_ViewController.xib */; };
+		2D507F701A11B53800B669FC /* SetAttention_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D507F631A11B53800B669FC /* SetAttention_TableViewController.m */; };
+		2D507F711A11B53800B669FC /* SetAttention_TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D507F641A11B53800B669FC /* SetAttention_TableViewController.xib */; };
+		2D507F721A11B53800B669FC /* SetLock_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D507F661A11B53800B669FC /* SetLock_TableViewController.m */; };
+		2D507F731A11B53800B669FC /* SetLock_TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D507F671A11B53800B669FC /* SetLock_TableViewController.xib */; };
+		2D507F741A11B53800B669FC /* SetRemind_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D507F691A11B53800B669FC /* SetRemind_TableViewController.m */; };
+		2D507F751A11B53800B669FC /* SetRemind_TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D507F6A1A11B53800B669FC /* SetRemind_TableViewController.xib */; };
+		2D507F761A11B53800B669FC /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D507F6C1A11B53800B669FC /* SettingTableViewController.m */; };
 		2D906BD41A1108EB009B21E0 /* icon_check_hud.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D906BD21A1108EA009B21E0 /* icon_check_hud.png */; };
 		2D906BD51A1108EB009B21E0 /* icon_check_hud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D906BD31A1108EB009B21E0 /* icon_check_hud@2x.png */; };
 		2D906BD81A1108FB009B21E0 /* icon_error_hud.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D906BD61A1108FB009B21E0 /* icon_error_hud.png */; };
@@ -260,6 +270,21 @@
 		2D38E1821A10F8690039F7E4 /* CHJRequestUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHJRequestUrl.m; sourceTree = "<group>"; };
 		2D4D8FF91A10AEA1009B5CE4 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		2D4D8FFA1A10AEA1009B5CE4 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		2D507F5E1A11B53800B669FC /* okicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = okicon.png; sourceTree = "<group>"; };
+		2D507F5F1A11B53800B669FC /* SetAbout_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetAbout_ViewController.h; sourceTree = "<group>"; };
+		2D507F601A11B53800B669FC /* SetAbout_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetAbout_ViewController.m; sourceTree = "<group>"; };
+		2D507F611A11B53800B669FC /* SetAbout_ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetAbout_ViewController.xib; sourceTree = "<group>"; };
+		2D507F621A11B53800B669FC /* SetAttention_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetAttention_TableViewController.h; sourceTree = "<group>"; };
+		2D507F631A11B53800B669FC /* SetAttention_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetAttention_TableViewController.m; sourceTree = "<group>"; };
+		2D507F641A11B53800B669FC /* SetAttention_TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetAttention_TableViewController.xib; sourceTree = "<group>"; };
+		2D507F651A11B53800B669FC /* SetLock_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetLock_TableViewController.h; sourceTree = "<group>"; };
+		2D507F661A11B53800B669FC /* SetLock_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetLock_TableViewController.m; sourceTree = "<group>"; };
+		2D507F671A11B53800B669FC /* SetLock_TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetLock_TableViewController.xib; sourceTree = "<group>"; };
+		2D507F681A11B53800B669FC /* SetRemind_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetRemind_TableViewController.h; sourceTree = "<group>"; };
+		2D507F691A11B53800B669FC /* SetRemind_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetRemind_TableViewController.m; sourceTree = "<group>"; };
+		2D507F6A1A11B53800B669FC /* SetRemind_TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetRemind_TableViewController.xib; sourceTree = "<group>"; };
+		2D507F6B1A11B53800B669FC /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		2D507F6C1A11B53800B669FC /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 		2D906BD11A11030A009B21E0 /* CHJRequesHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHJRequesHeaders.h; sourceTree = "<group>"; };
 		2D906BD21A1108EA009B21E0 /* icon_check_hud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_hud.png; sourceTree = "<group>"; };
 		2D906BD31A1108EB009B21E0 /* icon_check_hud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_check_hud@2x.png"; sourceTree = "<group>"; };
@@ -592,6 +617,21 @@
 		2D3175211A0F6C2C00ED1599 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				2D507F5E1A11B53800B669FC /* okicon.png */,
+				2D507F5F1A11B53800B669FC /* SetAbout_ViewController.h */,
+				2D507F601A11B53800B669FC /* SetAbout_ViewController.m */,
+				2D507F611A11B53800B669FC /* SetAbout_ViewController.xib */,
+				2D507F621A11B53800B669FC /* SetAttention_TableViewController.h */,
+				2D507F631A11B53800B669FC /* SetAttention_TableViewController.m */,
+				2D507F641A11B53800B669FC /* SetAttention_TableViewController.xib */,
+				2D507F651A11B53800B669FC /* SetLock_TableViewController.h */,
+				2D507F661A11B53800B669FC /* SetLock_TableViewController.m */,
+				2D507F671A11B53800B669FC /* SetLock_TableViewController.xib */,
+				2D507F681A11B53800B669FC /* SetRemind_TableViewController.h */,
+				2D507F691A11B53800B669FC /* SetRemind_TableViewController.m */,
+				2D507F6A1A11B53800B669FC /* SetRemind_TableViewController.xib */,
+				2D507F6B1A11B53800B669FC /* SettingTableViewController.h */,
+				2D507F6C1A11B53800B669FC /* SettingTableViewController.m */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -773,6 +813,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BA2BCC31A0F632100D8B186 /* Images.xcassets in Resources */,
+				2D507F751A11B53800B669FC /* SetRemind_TableViewController.xib in Resources */,
 				2D906BD81A1108FB009B21E0 /* icon_error_hud.png in Resources */,
 				2D31742C1A0F63E400ED1599 /* Default-568h@2x.png in Resources */,
 				2D906BD91A1108FB009B21E0 /* icon_error_hud@2x.png in Resources */,
@@ -783,8 +824,12 @@
 				2D3174601A0F652200ED1599 /* MJRefresh.bundle in Resources */,
 				3BA2BCB51A0F632100D8B186 /* InfoPlist.strings in Resources */,
 				2D3175311A0F744B00ED1599 /* other-x@2x.png in Resources */,
+				2D507F731A11B53800B669FC /* SetLock_TableViewController.xib in Resources */,
 				2D3174871A0F652B00ED1599 /* IQKeyboardManager.bundle in Resources */,
+				2D507F6D1A11B53800B669FC /* okicon.png in Resources */,
 				2D31752D1A0F73BB00ED1599 /* mine-x@2x.png in Resources */,
+				2D507F6F1A11B53800B669FC /* SetAbout_ViewController.xib in Resources */,
+				2D507F711A11B53800B669FC /* SetAttention_TableViewController.xib in Resources */,
 				2D906BD51A1108EB009B21E0 /* icon_check_hud@2x.png in Resources */,
 				2D906BD41A1108EB009B21E0 /* icon_check_hud.png in Resources */,
 				2D906BDE1A110B86009B21E0 /* SVProgressHUD.bundle in Resources */,
@@ -812,6 +857,7 @@
 				2D3175161A0F6A7800ED1599 /* MyViewController.m in Sources */,
 				3BA2BCC11A0F632100D8B186 /* LoginViewController.m in Sources */,
 				2D3174C41A0F653B00ED1599 /* UIView+WebCacheOperation.m in Sources */,
+				2D507F741A11B53800B669FC /* SetRemind_TableViewController.m in Sources */,
 				2D3174F51A0F654400ED1599 /* AFURLResponseSerialization.m in Sources */,
 				2D3174651A0F652200ED1599 /* UIScrollView+MJExtension.m in Sources */,
 				2D4D8FFB1A10AEA1009B5CE4 /* Product.m in Sources */,
@@ -820,8 +866,10 @@
 				2D31748A1A0F652B00ED1599 /* IQNSArray+Sort.m in Sources */,
 				2D31748E1A0F652B00ED1599 /* IQToolbar.m in Sources */,
 				2D3174BF1A0F653B00ED1599 /* UIButton+WebCache.m in Sources */,
+				2D507F721A11B53800B669FC /* SetLock_TableViewController.m in Sources */,
 				2D3174401A0F64C400ED1599 /* ViewUtils.m in Sources */,
 				2D3174F91A0F654400ED1599 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				2D507F6E1A11B53800B669FC /* SetAbout_ViewController.m in Sources */,
 				2D3174B61A0F653B00ED1599 /* README.md in Sources */,
 				2D3174C01A0F653B00ED1599 /* UIImage+GIF.m in Sources */,
 				2D3174BE1A0F653B00ED1599 /* SDWebImagePrefetcher.m in Sources */,
@@ -850,6 +898,7 @@
 				2D38E1831A10F8690039F7E4 /* CHJRequestUrl.m in Sources */,
 				3BA4EAAE1A10AFD800AB8C26 /* AddActivity ViewController.m in Sources */,
 				2D3174891A0F652B00ED1599 /* IQKeyboardReturnKeyHandler.m in Sources */,
+				2D507F701A11B53800B669FC /* SetAttention_TableViewController.m in Sources */,
 				2D3174621A0F652200ED1599 /* MJRefreshConst.m in Sources */,
 				3BA2BCBB1A0F632100D8B186 /* AppDelegate.m in Sources */,
 				2D3174931A0F652B00ED1599 /* README.md in Sources */,
@@ -877,6 +926,7 @@
 				2D3174F31A0F654400ED1599 /* AFURLConnectionOperation.m in Sources */,
 				2D31751C1A0F6B7D00ED1599 /* AllViewController.m in Sources */,
 				2D3174C31A0F653B00ED1599 /* UIImageView+WebCache.m in Sources */,
+				2D507F761A11B53800B669FC /* SettingTableViewController.m in Sources */,
 				2D3174B81A0F653B00ED1599 /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
