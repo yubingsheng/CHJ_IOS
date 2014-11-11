@@ -8,38 +8,74 @@
 
 #import "MyViewController.h"
 #import "MJRefresh.h"
+#import "MyActivityCell.h"
+
 @interface MyViewController ()<UITableViewDataSource,UITableViewDelegate>
-@property (strong,nonatomic)UITableView *tableView;
+
+{
+   UITableView *myTableView;
+}
 
 @end
 
 @implementation MyViewController
+
+
+// 我的会议安排
+- (void)GetListByPage2:(NSString*)eName StartIndex:(int)startIndex EndIndex:(int)endIndex
+{
+    NSString* urlString = [NSString stringWithFormat:@"<GetListByPage2 xmlns=\"http://www.woowei.cn/\">\n"
+                           "<EName>%@</EName>\n"
+                           "<orderby></orderby>\n"
+                           "<startIndex>%d</startIndex>\n"
+                           "<endIndex>%d</endIndex>\n"
+                           "</GetListByPage2>\n",eName,startIndex,endIndex];
+    CHJRequestUrl *request=[CHJRequest GetListByPage2:urlString soapUrl:@"GetListByPage2"];
+    CHJRequestoperation *operation=[[CHJRequestoperation alloc]initWithRequest:request success:^(id result){
+//        UIStoryboard *sb=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//        
+//        CustomTabbarController *vc=[sb instantiateViewControllerWithIdentifier:@"tabbar"];
+//        [self presentViewController:vc animated:YES completion:nil];
+        NSLog(@"成功");
+        
+        NSString* request = (NSString*)result;
+        NSLog(@" == %@",request);
+        
+    } failure:^(NSError *error){
+         NSLog(@"失败");
+    }];
+    [operation startWithHUD:@"正在加载" inView:self.view];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets=NO;
     [self addTableView];
     [self initNavigationBar];
+    
+    [self GetListByPage2:@"方银儿" StartIndex:0 EndIndex:10];
     // Do any additional setup after loading the view from its nib.
 }
 
 #pragma mark -addViews
 -(void)addTableView
 {
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64, Main_Screen_Width, Main_Screen_Height-64-44)];
-    _tableView.delegate=self;
-    _tableView.dataSource=self;
-    [_tableView addHeaderWithTarget:self action:@selector(headerRefresh)];
-    [_tableView addFooterWithTarget:self action:@selector(footerRefresh)];
-    [self.view addSubview:_tableView];
+    myTableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64, Main_Screen_Width, Main_Screen_Height-64-44)];
+    myTableView.delegate=self;
+    myTableView.dataSource=self;
+    [myTableView addHeaderWithTarget:self action:@selector(headerRefresh)];
+    [myTableView addFooterWithTarget:self action:@selector(footerRefresh)];
+    [myTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [self.view addSubview:myTableView];
 }
 -(void)headerRefresh
 {
-    [_tableView footerEndRefreshing];
+    [myTableView footerEndRefreshing];
 }
 -(void)footerRefresh
 {
-    [_tableView headerEndRefreshing];
+    [myTableView headerEndRefreshing];
 }
 - (void)initNavigationBar
 {
@@ -59,30 +95,40 @@
 {
     
 }
-#pragma mark- TableViewDelegate
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-}
+
+
 #pragma mark - TableViewDataSource
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *str=@"cell";
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:str];
+    MyActivityCell *cell=[tableView dequeueReusableCellWithIdentifier:str];
     if (cell==nil)
     {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+        cell=[[MyActivityCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
     }
-    NSDate *  senddate=[NSDate date];
-    NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
-    [dateformatter setDateFormat:@"HH:mm"];
-    NSString *  locationString=[dateformatter stringFromDate:senddate];
-    
-    cell.textLabel.text=[NSString stringWithFormat:@"%@",locationString];
+//    NSDate *  senddate=[NSDate date];
+//    NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
+//    [dateformatter setDateFormat:@"HH:mm"];
+//    NSString *  locationString=[dateformatter stringFromDate:senddate];
+//    
+//    cell.textLabel.text=[NSString stringWithFormat:@"%@",locationString];
     return cell;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 24;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+    
 }
 #pragma mark - MemoryWarning
 - (void)didReceiveMemoryWarning {

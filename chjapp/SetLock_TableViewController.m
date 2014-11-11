@@ -118,32 +118,32 @@
             }
             else
             {
-                //调用日期显示
-                UIDatePicker * datePicker = [[UIDatePicker alloc] init];
-                datePicker.tag = 101;
-                datePicker.datePickerMode = UIDatePickerModeTime;
-
-                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"\n\n\n\n\n\n\n\n\n\n\n\n"
-                                                                               message:nil
-                                                                        preferredStyle:UIAlertControllerStyleActionSheet];
-                [alert.view addSubview:datePicker];
-                 UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-                     formatter.dateFormat = @" h:mm a";
-                     time = [formatter stringFromDate:datePicker.date];
-                    //显示时间的变量
-                     //一个cell刷新
-                     NSIndexPath *indexPath=[NSIndexPath indexPathForRow:0 inSection:1];
-                     [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
-                    
-                 }];
-                UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) { }];
-                [alert addAction:ok];
-                [alert addAction:cancel];
-                    
+//                //调用日期显示
+//                UIDatePicker * datePicker = [[UIDatePicker alloc] init];
+//                datePicker.tag = 101;
+//                datePicker.datePickerMode = UIDatePickerModeTime;
+//
+//                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"\n\n\n\n\n\n\n\n\n\n\n\n"
+//                                                                               message:nil
+//                                                                        preferredStyle:UIAlertControllerStyleActionSheet];
+//                [alert.view addSubview:datePicker];
+//                 UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//                     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//                     formatter.dateFormat = @" h:mm a";
+//                     time = [formatter stringFromDate:datePicker.date];
+//                    //显示时间的变量
+//                     //一个cell刷新
+//                     NSIndexPath *indexPath=[NSIndexPath indexPathForRow:0 inSection:1];
+//                     [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
+//                    
+//                 }];
+//                UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) { }];
+//                [alert addAction:ok];
+//                [alert addAction:cancel];
+//                    
+//                
+//                [self presentViewController:alert animated:YES completion:nil];
                 
-                [self presentViewController:alert animated:YES completion:nil];
-                 
             }
             break;
         case 2:

@@ -13,4 +13,8 @@
 @interface CHJRequest : NSObject
 //登录
 + (CHJRequestUrl *)loginRequestWithSoapBody:(NSString*)soapBody soapUrl:(NSString*)soapUrl;
+
+//我的会议安排
++ (CHJRequestUrl *)GetListByPage2:(NSString*)soapBody soapUrl:(NSString*)soapUrl;
+
 @end

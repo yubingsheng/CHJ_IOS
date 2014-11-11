@@ -22,5 +22,18 @@
     return request;
 }
 
+//我的会议安排
++ (CHJRequestUrl *)GetListByPage2:(NSString*)soapBody soapUrl:(NSString*)soapUrl
+{
+    CHJRequestUrl *request = [[CHJRequestUrl alloc]initWithBaseURL:BASE_URL
+                                                           service:@"WebService"
+                                                            method:@"Meetings.asmx"
+                                                        httpMethod:@"POST"
+                                                        parameters:nil
+                                                          soapBody:soapBody
+                                                           soapUrl:soapUrl];
+    return request;
+}
+
 
 @end

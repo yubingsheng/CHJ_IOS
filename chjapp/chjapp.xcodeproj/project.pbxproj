@@ -113,6 +113,7 @@
 		3BA2BCD41A0F632100D8B186 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BA2BCD21A0F632100D8B186 /* InfoPlist.strings */; };
 		3BA2BCD61A0F632100D8B186 /* chjappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2BCD51A0F632100D8B186 /* chjappTests.m */; };
 		3BA4EAAE1A10AFD800AB8C26 /* AddActivity ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4EAAD1A10AFD800AB8C26 /* AddActivity ViewController.m */; };
+		3BAD94561A11D379000FA9F9 /* MyActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAD94551A11D379000FA9F9 /* MyActivityCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -314,6 +315,8 @@
 		3BA2BCD51A0F632100D8B186 /* chjappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chjappTests.m; sourceTree = "<group>"; };
 		3BA4EAAC1A10AFD800AB8C26 /* AddActivity ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AddActivity ViewController.h"; sourceTree = "<group>"; };
 		3BA4EAAD1A10AFD800AB8C26 /* AddActivity ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AddActivity ViewController.m"; sourceTree = "<group>"; };
+		3BAD94541A11D379000FA9F9 /* MyActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyActivityCell.h; sourceTree = "<group>"; };
+		3BAD94551A11D379000FA9F9 /* MyActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyActivityCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -590,6 +593,8 @@
 			children = (
 				2D3175131A0F6A7800ED1599 /* MyViewController.h */,
 				2D3175141A0F6A7800ED1599 /* MyViewController.m */,
+				3BAD94541A11D379000FA9F9 /* MyActivityCell.h */,
+				3BAD94551A11D379000FA9F9 /* MyActivityCell.m */,
 				3BA4EAAC1A10AFD800AB8C26 /* AddActivity ViewController.h */,
 				3BA4EAAD1A10AFD800AB8C26 /* AddActivity ViewController.m */,
 			);
@@ -900,6 +905,7 @@
 				2D3174891A0F652B00ED1599 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				2D507F701A11B53800B669FC /* SetAttention_TableViewController.m in Sources */,
 				2D3174621A0F652200ED1599 /* MJRefreshConst.m in Sources */,
+				3BAD94561A11D379000FA9F9 /* MyActivityCell.m in Sources */,
 				3BA2BCBB1A0F632100D8B186 /* AppDelegate.m in Sources */,
 				2D3174931A0F652B00ED1599 /* README.md in Sources */,
 				2D3175201A0F6C0000ED1599 /* FollowViewController.m in Sources */,
