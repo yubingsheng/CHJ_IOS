@@ -24,7 +24,7 @@
     CHJRequestUrl *request=[CHJRequest loginRequestWithSoapBody:@"<GetModelByENameAndEPassword2 xmlns=\"http://www.woowei.cn/\">\n"
                          "<EName>方银儿</EName>\n"
                          "<EPassword>123456</EPassword>\n"
-                         "</GetModelByENameAndEPassword2>\n"];
+                         "</GetModelByENameAndEPassword2>\n" soapUrl:@"GetModelByENameAndEPassword2"];
     CHJRequestoperation *operation=[[CHJRequestoperation alloc]initWithRequest:request success:^(id result){
         UIStoryboard *sb=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
         

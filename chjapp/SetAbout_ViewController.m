@@ -18,6 +18,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithRed:238/255. green:238/255. blue:238/255. alpha:1.];
         self.navigationItem.title = @"关于漕河泾日历";
+    
     //,,sdfsdfsdffsdf
 }
 

@@ -15,7 +15,7 @@
                method:(NSString *)method
            httpMethod:(NSString *)httpMethod
            parameters:(NSDictionary *)parameters
-             soapBody:(NSString*)soapBody
+             soapBody:(NSString*)soapBody soapUrl:(NSString *)soapUrl
 {
     if (self = [super init]) {
         _baseURL = baseURL;
@@ -25,6 +25,7 @@
         _parameters = parameters;
         _timeOutInterval = 30;
         _soapBody=soapBody;
+        _soapUrl=soapUrl;
         _requestURL = [self requestUrlStringService:service method:method];
     }
     return self;

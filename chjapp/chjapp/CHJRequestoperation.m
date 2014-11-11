@@ -33,11 +33,14 @@
                         "</soap:Body>\n"
                         "</soap:Envelope>\n",[self soapHeader],_request.soapBody];
     NSString *urlStr=[NSString stringWithFormat:@"%@%@",BASE_URL,_request.requestURL];
+    
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
-    NSString *msgLength = [NSString stringWithFormat:@"%ld", [soapMsg length]];
+    NSString *msgLength = [NSString stringWithFormat:@"%ld", (unsigned long)[soapMsg length]];
+    
     [req addValue:@"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     [req addValue:msgLength forHTTPHeaderField:@"Content-Length"];
-    [req addValue:@"http://www.woowei.cn/GetModelByENameAndEPassword2" forHTTPHeaderField:@"SOAPAction"];
+    
+    [req addValue:[NSString stringWithFormat:@"%@%@",_request.baseURL,_request.soapUrl] forHTTPHeaderField:@"SOAPAction"];
     
     [req setHTTPMethod:_request.httpMethod];
     [req setHTTPBody: [soapMsg dataUsingEncoding:NSUTF8StringEncoding]];

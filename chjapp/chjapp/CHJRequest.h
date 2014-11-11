@@ -12,5 +12,5 @@
 
 @interface CHJRequest : NSObject
 //登录
-+ (CHJRequestUrl *)loginRequestWithSoapBody:(NSString*)soapBody;
++ (CHJRequestUrl *)loginRequestWithSoapBody:(NSString*)soapBody soapUrl:(NSString*)soapUrl;
 @end

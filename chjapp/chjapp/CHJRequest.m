@@ -10,14 +10,15 @@
 
 @implementation CHJRequest
 //登录
-+ (CHJRequestUrl *)loginRequestWithSoapBody:(NSString*)soapBody
++ (CHJRequestUrl *)loginRequestWithSoapBody:(NSString*)soapBody soapUrl:(NSString*)soapUrl
 {
     CHJRequestUrl *request = [[CHJRequestUrl alloc]initWithBaseURL:BASE_URL
                                                          service:@"WebService"
                                                           method:@"Employees.asmx"
                                                       httpMethod:@"POST"
                                                       parameters:nil
-                                                      soapBody:soapBody];
+                                                        soapBody:soapBody
+                                                        soapUrl:soapUrl];
     return request;
 }
 

@@ -17,11 +17,13 @@
 @property (strong, nonatomic)NSString *httpMethod;
 @property (strong, nonatomic)NSString *requestURL;
 @property (strong, nonatomic)NSString *soapBody;
+@property (strong, nonatomic)NSString *soapUrl;
 
 - (id)initWithBaseURL:(NSString *)baseURL
               service:(NSString *)service
                method:(NSString *)method
            httpMethod:(NSString *)httpMethod
            parameters:(NSDictionary *)parameters
-             soapBody:(NSString*)soapBody;
+             soapBody:(NSString*)soapBody
+              soapUrl:(NSString*)soapUrl;
 @end
