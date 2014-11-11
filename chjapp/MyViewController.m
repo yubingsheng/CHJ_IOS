@@ -14,6 +14,7 @@
 
 {
    UITableView *myTableView;
+    BOOL   isShowed;
 }
 
 @end
@@ -89,7 +90,18 @@
 }
 -(void)leftMeun
 {
-    
+    AppDelegate *app=(AppDelegate*)[[UIApplication sharedApplication]delegate];
+    app.LeftView.cellAction=^(id obj){
+        DLog(@"obj==%@",obj);
+    };
+    if (app.LeftView.tag==0)
+    {
+        [app showLeftMenu];
+    }
+    else
+    {
+        [app hidedLeftView];
+    }
 }
 -(void)addThing
 {

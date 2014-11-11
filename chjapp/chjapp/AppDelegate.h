@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LeftMeunView.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) LeftMeunView *LeftView;
+-(void)showLeftMenu;
+-(void)hidedLeftView;
 @end

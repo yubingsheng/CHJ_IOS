@@ -18,7 +18,15 @@
     
     [application setStatusBarHidden:NO];
     [application setStatusBarStyle:UIStatusBarStyleLightContent];
-    
+    _LeftView=[[LeftMeunView alloc]initWithFrame:CGRectMake(0, 0, Main_Screen_Width, Main_Screen_Height)];
+    __block AppDelegate *ad=self;
+    _LeftView.cellAction=^(id obj){
+        [ad hidedLeftView];
+    };
+    UISwipeGestureRecognizer* swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe)];
+    swipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    [_LeftView addGestureRecognizer:swipe];
+    [self.window addSubview:_LeftView];
     return YES;
 }
 - (UIImage *) navigationBarImageFromColor:(UIColor *)color {
@@ -30,6 +38,44 @@
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return img;
+}
+
+-(void)showLeftMenu
+{
+    [UIView animateWithDuration:0.26 animations:^{
+        for (UIView *xx in self.window.subviews)
+        {
+            if (xx!=_LeftView)
+            {
+                xx.frame=CGRectMake(xx.frame.origin.x+Main_Screen_Width-60, xx.frame.origin.y, xx.frame.size.width, xx.frame.size.height);
+            }
+        }
+    } completion:nil];
+    [UIView animateWithDuration:0.14 animations:^{
+        _LeftView.tag=1;
+    }];
+}
+-(void)swipe
+{
+    [self hidedLeftView];
+}
+
+-(void)hidedLeftView
+{
+    [UIView animateWithDuration:0.2 animations:^{
+        for (UIView *xx in self.window.subviews)
+        {
+            if (xx!=_LeftView)
+            {
+                xx.frame=CGRectMake(xx.frame.origin.x-Main_Screen_Width+60, xx.frame.origin.y, xx.frame.size.width, xx.frame.size.height);
+            }
+        }
+    } completion:^(BOOL bl){
+        [UIView animateWithDuration:0.1 animations:^{
+            _LeftView.tag=0;
+        }];
+        
+    }];
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {

@@ -92,6 +92,11 @@
 		2D507F741A11B53800B669FC /* SetRemind_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D507F691A11B53800B669FC /* SetRemind_TableViewController.m */; };
 		2D507F751A11B53800B669FC /* SetRemind_TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D507F6A1A11B53800B669FC /* SetRemind_TableViewController.xib */; };
 		2D507F761A11B53800B669FC /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D507F6C1A11B53800B669FC /* SettingTableViewController.m */; };
+		2D507F781A11F2FA00B669FC /* 登录按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D507F771A11F2FA00B669FC /* 登录按钮.png */; };
+		2D507F7A1A11F30200B669FC /* 顶部logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D507F791A11F30200B669FC /* 顶部logo.png */; };
+		2D507F7C1A11F33900B669FC /* APP-ICON-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D507F7B1A11F33900B669FC /* APP-ICON-512.png */; };
+		2D507F7E1A11F3D800B669FC /* 登陆界面11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D507F7D1A11F3D800B669FC /* 登陆界面11.jpg */; };
+		2D507F821A11F50700B669FC /* LeftMeunView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D507F811A11F50700B669FC /* LeftMeunView.m */; };
 		2D906BD41A1108EB009B21E0 /* icon_check_hud.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D906BD21A1108EA009B21E0 /* icon_check_hud.png */; };
 		2D906BD51A1108EB009B21E0 /* icon_check_hud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D906BD31A1108EB009B21E0 /* icon_check_hud@2x.png */; };
 		2D906BD81A1108FB009B21E0 /* icon_error_hud.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D906BD61A1108FB009B21E0 /* icon_error_hud.png */; };
@@ -286,6 +291,12 @@
 		2D507F6A1A11B53800B669FC /* SetRemind_TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetRemind_TableViewController.xib; sourceTree = "<group>"; };
 		2D507F6B1A11B53800B669FC /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
 		2D507F6C1A11B53800B669FC /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		2D507F771A11F2FA00B669FC /* 登录按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录按钮.png"; sourceTree = "<group>"; };
+		2D507F791A11F30200B669FC /* 顶部logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "顶部logo.png"; sourceTree = "<group>"; };
+		2D507F7B1A11F33900B669FC /* APP-ICON-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "APP-ICON-512.png"; sourceTree = "<group>"; };
+		2D507F7D1A11F3D800B669FC /* 登陆界面11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "登陆界面11.jpg"; sourceTree = "<group>"; };
+		2D507F801A11F50700B669FC /* LeftMeunView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMeunView.h; sourceTree = "<group>"; };
+		2D507F811A11F50700B669FC /* LeftMeunView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMeunView.m; sourceTree = "<group>"; };
 		2D906BD11A11030A009B21E0 /* CHJRequesHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHJRequesHeaders.h; sourceTree = "<group>"; };
 		2D906BD21A1108EA009B21E0 /* icon_check_hud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_hud.png; sourceTree = "<group>"; };
 		2D906BD31A1108EB009B21E0 /* icon_check_hud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_check_hud@2x.png"; sourceTree = "<group>"; };
@@ -346,6 +357,10 @@
 		2D31742A1A0F63BB00ED1599 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2D507F7D1A11F3D800B669FC /* 登陆界面11.jpg */,
+				2D507F791A11F30200B669FC /* 顶部logo.png */,
+				2D507F7B1A11F33900B669FC /* APP-ICON-512.png */,
+				2D507F771A11F2FA00B669FC /* 登录按钮.png */,
 				2D906BD61A1108FB009B21E0 /* icon_error_hud.png */,
 				2D906BD71A1108FB009B21E0 /* icon_error_hud@2x.png */,
 				2D906BD21A1108EA009B21E0 /* icon_check_hud.png */,
@@ -560,6 +575,7 @@
 		2D31750F1A0F69B600ED1599 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2D507F7F1A11F4D500B669FC /* LeftMenuView */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -653,6 +669,15 @@
 				2D38E17F1A10F4B90039F7E4 /* CHJRequestoperation.m */,
 			);
 			name = RequestHelp;
+			sourceTree = "<group>";
+		};
+		2D507F7F1A11F4D500B669FC /* LeftMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				2D507F801A11F50700B669FC /* LeftMeunView.h */,
+				2D507F811A11F50700B669FC /* LeftMeunView.m */,
+			);
+			name = LeftMenuView;
 			sourceTree = "<group>";
 		};
 		2D906BDA1A110B86009B21E0 /* SVProgressHUD */ = {
@@ -830,6 +855,9 @@
 				3BA2BCB51A0F632100D8B186 /* InfoPlist.strings in Resources */,
 				2D3175311A0F744B00ED1599 /* other-x@2x.png in Resources */,
 				2D507F731A11B53800B669FC /* SetLock_TableViewController.xib in Resources */,
+				2D507F7C1A11F33900B669FC /* APP-ICON-512.png in Resources */,
+				2D507F7E1A11F3D800B669FC /* 登陆界面11.jpg in Resources */,
+				2D507F781A11F2FA00B669FC /* 登录按钮.png in Resources */,
 				2D3174871A0F652B00ED1599 /* IQKeyboardManager.bundle in Resources */,
 				2D507F6D1A11B53800B669FC /* okicon.png in Resources */,
 				2D31752D1A0F73BB00ED1599 /* mine-x@2x.png in Resources */,
@@ -840,6 +868,7 @@
 				2D906BDE1A110B86009B21E0 /* SVProgressHUD.bundle in Resources */,
 				2D3175351A0F757100ED1599 /* addx@2x.png in Resources */,
 				2D3174F71A0F654400ED1599 /* LICENSE in Resources */,
+				2D507F7A1A11F30200B669FC /* 顶部logo.png in Resources */,
 				3BA2BCBE1A0F632100D8B186 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -863,6 +892,7 @@
 				3BA2BCC11A0F632100D8B186 /* LoginViewController.m in Sources */,
 				2D3174C41A0F653B00ED1599 /* UIView+WebCacheOperation.m in Sources */,
 				2D507F741A11B53800B669FC /* SetRemind_TableViewController.m in Sources */,
+				2D507F821A11F50700B669FC /* LeftMeunView.m in Sources */,
 				2D3174F51A0F654400ED1599 /* AFURLResponseSerialization.m in Sources */,
 				2D3174651A0F652200ED1599 /* UIScrollView+MJExtension.m in Sources */,
 				2D4D8FFB1A10AEA1009B5CE4 /* Product.m in Sources */,
