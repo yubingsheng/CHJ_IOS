@@ -121,6 +121,11 @@
 		3BA2BCD61A0F632100D8B186 /* chjappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2BCD51A0F632100D8B186 /* chjappTests.m */; };
 		3BA4EAAE1A10AFD800AB8C26 /* AddActivity ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4EAAD1A10AFD800AB8C26 /* AddActivity ViewController.m */; };
 		3BAD94561A11D379000FA9F9 /* MyActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAD94551A11D379000FA9F9 /* MyActivityCell.m */; };
+		D2A96CBB1A12F96B00637A26 /* 顶部logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A96CBA1A12F96B00637A26 /* 顶部logo.png */; };
+		D2A96CC21A131A6300637A26 /* personicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A96CBF1A131A6300637A26 /* personicon@2x.png */; };
+		D2A96CC31A131A6300637A26 /* thingicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A96CC01A131A6300637A26 /* thingicon@2x.png */; };
+		D2A96CC41A131A6300637A26 /* timeicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A96CC11A131A6300637A26 /* timeicon@2x.png */; };
+		D2A96CCA1A13221900637A26 /* MeetingDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A96CC91A13221900637A26 /* MeetingDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -333,6 +338,12 @@
 		3BA4EAAD1A10AFD800AB8C26 /* AddActivity ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AddActivity ViewController.m"; sourceTree = "<group>"; };
 		3BAD94541A11D379000FA9F9 /* MyActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyActivityCell.h; sourceTree = "<group>"; };
 		3BAD94551A11D379000FA9F9 /* MyActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyActivityCell.m; sourceTree = "<group>"; };
+		D2A96CBA1A12F96B00637A26 /* 顶部logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "顶部logo.png"; sourceTree = "<group>"; };
+		D2A96CBF1A131A6300637A26 /* personicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personicon@2x.png"; sourceTree = "<group>"; };
+		D2A96CC01A131A6300637A26 /* thingicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thingicon@2x.png"; sourceTree = "<group>"; };
+		D2A96CC11A131A6300637A26 /* timeicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeicon@2x.png"; sourceTree = "<group>"; };
+		D2A96CC81A13221900637A26 /* MeetingDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingDetailsViewController.h; sourceTree = "<group>"; };
+		D2A96CC91A13221900637A26 /* MeetingDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -636,8 +647,13 @@
 		2D31751D1A0F6BC900ED1599 /* Follow */ = {
 			isa = PBXGroup;
 			children = (
+				D2A96CBF1A131A6300637A26 /* personicon@2x.png */,
+				D2A96CC01A131A6300637A26 /* thingicon@2x.png */,
+				D2A96CC11A131A6300637A26 /* timeicon@2x.png */,
 				2D31751E1A0F6C0000ED1599 /* FollowViewController.h */,
 				2D31751F1A0F6C0000ED1599 /* FollowViewController.m */,
+				D2A96CC81A13221900637A26 /* MeetingDetailsViewController.h */,
+				D2A96CC91A13221900637A26 /* MeetingDetailsViewController.m */,
 			);
 			name = Follow;
 			sourceTree = "<group>";
@@ -681,6 +697,7 @@
 		2D507F7F1A11F4D500B669FC /* LeftMenuView */ = {
 			isa = PBXGroup;
 			children = (
+				D2A96CBA1A12F96B00637A26 /* 顶部logo.png */,
 				2D507F801A11F50700B669FC /* LeftMeunView.h */,
 				2D507F811A11F50700B669FC /* LeftMeunView.m */,
 			);
@@ -864,12 +881,14 @@
 				2D906BD81A1108FB009B21E0 /* icon_error_hud.png in Resources */,
 				2D31742C1A0F63E400ED1599 /* Default-568h@2x.png in Resources */,
 				2D906BD91A1108FB009B21E0 /* icon_error_hud@2x.png in Resources */,
+				D2A96CC21A131A6300637A26 /* personicon@2x.png in Resources */,
 				2D31752F1A0F73DE00ED1599 /* setupx@2x.png in Resources */,
 				2D31752B1A0F717900ED1599 /* all-x@2x.png in Resources */,
 				2D3175331A0F74D400ED1599 /* morex@2x.png in Resources */,
 				2D3174B51A0F653B00ED1599 /* LICENSE in Resources */,
 				2D3174601A0F652200ED1599 /* MJRefresh.bundle in Resources */,
 				3BA2BCB51A0F632100D8B186 /* InfoPlist.strings in Resources */,
+				D2A96CC31A131A6300637A26 /* thingicon@2x.png in Resources */,
 				2D3175311A0F744B00ED1599 /* other-x@2x.png in Resources */,
 				2D507F731A11B53800B669FC /* SetLock_TableViewController.xib in Resources */,
 				2D507F7C1A11F33900B669FC /* APP-ICON-512.png in Resources */,
@@ -880,9 +899,11 @@
 				2D31752D1A0F73BB00ED1599 /* mine-x@2x.png in Resources */,
 				2D507F6F1A11B53800B669FC /* SetAbout_ViewController.xib in Resources */,
 				2D507F711A11B53800B669FC /* SetAttention_TableViewController.xib in Resources */,
+				D2A96CC41A131A6300637A26 /* timeicon@2x.png in Resources */,
 				2D906BD51A1108EB009B21E0 /* icon_check_hud@2x.png in Resources */,
 				2D906BD41A1108EB009B21E0 /* icon_check_hud.png in Resources */,
 				2D906BDE1A110B86009B21E0 /* SVProgressHUD.bundle in Resources */,
+				D2A96CBB1A12F96B00637A26 /* 顶部logo.png in Resources */,
 				2D3175351A0F757100ED1599 /* addx@2x.png in Resources */,
 				2D3174F71A0F654400ED1599 /* LICENSE in Resources */,
 				2D507F7A1A11F30200B669FC /* 顶部logo.png in Resources */,
@@ -947,6 +968,7 @@
 				2D3174641A0F652200ED1599 /* MJRefreshHeaderView.m in Sources */,
 				2D3174F11A0F654400ED1599 /* AFNetworkReachabilityManager.m in Sources */,
 				2D31748B1A0F652B00ED1599 /* IQSegmentedNextPrevious.m in Sources */,
+				D2A96CCA1A13221900637A26 /* MeetingDetailsViewController.m in Sources */,
 				2D3174901A0F652B00ED1599 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				2D38E1831A10F8690039F7E4 /* CHJRequestUrl.m in Sources */,
 				3BA4EAAE1A10AFD800AB8C26 /* AddActivity ViewController.m in Sources */,

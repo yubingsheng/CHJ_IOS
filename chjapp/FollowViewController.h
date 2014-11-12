@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FollowViewController : UIViewController
-
+@property (strong,nonatomic)UIView* leftView;
+@property (strong,nonatomic)UIView* rightView;
+@property (strong ,nonatomic)UIView* downView;
 @end

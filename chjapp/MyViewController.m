@@ -37,10 +37,10 @@
     CHJRequestUrl *request=[CHJRequest GetListByPage2:urlString soapUrl:@"GetListByPage2"];
     CHJRequestoperation *operation=[[CHJRequestoperation alloc]initWithRequest:request success:^(id result){
         
-        NSLog(@"成功");
+//        NSLog(@"成功");
         
         NSString* request = (NSString*)result;
-        NSLog(@" == %@",request);
+//        NSLog(@" == %@",request);
         [self xmlString:request];
         
     } failure:^(NSError *error){

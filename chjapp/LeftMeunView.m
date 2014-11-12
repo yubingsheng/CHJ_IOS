@@ -14,8 +14,11 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        UIImageView * iconImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 20, 260, 50)];
+        iconImage.image = [UIImage imageNamed:@"顶部logo.png"];
+        [self addSubview:iconImage];
         _tableView=[[UITableView alloc]init];
-        _tableView.frame=CGRectMake(0, 20, 265, Main_Screen_Height);
+        _tableView.frame=CGRectMake(0, 70, 265, Main_Screen_Height);
         _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
         [self setBackgroundColor:[UIColor colorWithRed:240.0/255 green:240.0/255 blue:244/255.0 alpha:1]];
         _tableView.delegate=self;
@@ -59,9 +62,11 @@
 }
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    
     UILabel *lab=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.width, 31)];
     lab.backgroundColor=[UIColor clearColor];
     lab.text=@"    显示方式";
+    lab.textAlignment =  NSTextAlignmentCenter;
     [lab setFont:[UIFont systemFontOfSize:14.0]];
     UIView *line=[[UIView alloc]initWithFrame:CGRectMake(10, 30, lab.width-10, 1)];
     [line setBackgroundColor:S_GRAY_LINE];

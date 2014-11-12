@@ -35,5 +35,18 @@
     return request;
 }
 
+//关注人的会议
++ (CHJRequestUrl *)GetMyAttentionPeopleMeetings2:(NSString*)soapBody soapUrl:(NSString*)soapUrl
+{
+    CHJRequestUrl *request = [[CHJRequestUrl alloc]initWithBaseURL:BASE_URL
+                                                           service:@"WebService"
+                                                            method:@"Attention.asmx"
+                                                        httpMethod:@"POST"
+                                                        parameters:nil
+                                                          soapBody:soapBody
+                                                           soapUrl:soapUrl];
+    return request;
+}
+
 
 @end

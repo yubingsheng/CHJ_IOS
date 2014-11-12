@@ -17,4 +17,6 @@
 //我的会议安排
 + (CHJRequestUrl *)GetListByPage2:(NSString*)soapBody soapUrl:(NSString*)soapUrl;
 
+//关注人的会议
++ (CHJRequestUrl *)GetMyAttentionPeopleMeetings2:(NSString*)soapBody soapUrl:(NSString*)soapUrl;
 @end
