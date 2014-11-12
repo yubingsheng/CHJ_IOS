@@ -103,7 +103,7 @@
 #pragma mark -addViews
 -(void)addTableView
 {
-    myTableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64, Main_Screen_Width, Main_Screen_Height-64-44)];
+    myTableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64, Main_Screen_Width, Main_Screen_Height-64-50)];
     myTableView.delegate=self;
     myTableView.dataSource=self;
     [myTableView addHeaderWithTarget:self action:@selector(headerRefresh)];

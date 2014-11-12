@@ -200,10 +200,6 @@
     UILabel *downLable = [[UILabel alloc] initWithFrame:CGRectMake(35, 10, self.downView.frame.size.width-30,30)];
     downLable.text = [NSString stringWithFormat:@"%@",[[allArr objectAtIndex:indexPath.row] objectForKey:@"MName"]];
     [self.downView addSubview:downLable];
-    
-    
-    
-    
     return cell;
 }
 

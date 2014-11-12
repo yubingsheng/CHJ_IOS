@@ -65,7 +65,7 @@
     
     UILabel *lab=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.width, 31)];
     lab.backgroundColor=[UIColor clearColor];
-    lab.text=@"    显示方式";
+    lab.text=@"显示方式";
     lab.textAlignment =  NSTextAlignmentCenter;
     [lab setFont:[UIFont systemFontOfSize:14.0]];
     UIView *line=[[UIView alloc]initWithFrame:CGRectMake(10, 30, lab.width-10, 1)];

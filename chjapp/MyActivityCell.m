@@ -77,8 +77,6 @@
     leftTopLab.text = [NSString stringWithFormat:@"%@",[dic objectForKey:@"MDate"]];
     leftDownLab.text = [NSString stringWithFormat:@"%@",[dic objectForKey:@"MSTIme"]];
     rightLab.text = [NSString stringWithFormat:@"%@",[dic objectForKey:@"MName"]];
-    
-    
 }
 
 - (void)awakeFromNib
