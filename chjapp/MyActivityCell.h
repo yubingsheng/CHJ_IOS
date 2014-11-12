@@ -11,4 +11,7 @@
 @interface MyActivityCell : UITableViewCell
 @property (strong,nonatomic)UIView* leftView;
 @property (strong,nonatomic)UIView* rightView;
+
+- (void)tableViewCellArray:(NSMutableArray*)array Index:(int)index;
+
 @end

@@ -10,8 +10,9 @@
 
 @implementation MyActivityCell
 {
-    
-    
+    UILabel* leftTopLab;
+    UILabel* leftDownLab;
+    UILabel* rightLab;
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -28,15 +29,15 @@
         [self addSubview:self.leftView];
         
         
-        UILabel* leftTopLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.leftView.frame.size.width, self.leftView.frame.size.height/2)];
-        leftTopLab.text = @"11 -11 周二";
+        leftTopLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.leftView.frame.size.width, self.leftView.frame.size.height/2)];
+//        leftTopLab.text = @"11 -11 周二";
         leftTopLab.font = [UIFont systemFontOfSize:10];
         [leftTopLab setTextAlignment:NSTextAlignmentCenter];
         [self.leftView addSubview:leftTopLab];
         
         
-        UILabel* leftDownLab = [[UILabel alloc]initWithFrame:CGRectMake(0, self.leftView.frame.size.height/2, self.leftView.frame.size.width, self.leftView.frame.size.height/2)];
-        leftDownLab.text = @"11:12-12.30";
+        leftDownLab = [[UILabel alloc]initWithFrame:CGRectMake(0, self.leftView.frame.size.height/2, self.leftView.frame.size.width, self.leftView.frame.size.height/2)];
+//        leftDownLab.text = @"11:12-12.30";
         leftDownLab.font = [UIFont systemFontOfSize:10];
         [leftDownLab setTextAlignment:NSTextAlignmentCenter];
         [leftDownLab setTextColor:[UIColor blueColor]];
@@ -57,8 +58,8 @@
         self.rightView.layer.borderColor = [UIColor redColor].CGColor;
         [self addSubview:self.rightView];
         
-        UILabel* rightLab = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, self.rightView.frame.size.width-20, self.rightView.frame.size.height)];
-        rightLab.text = @"agagsghdshdf";
+        rightLab = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, self.rightView.frame.size.width-20, self.rightView.frame.size.height)];
+//        rightLab.text = @"agagsghdshdf";
         rightLab.font = [UIFont systemFontOfSize:10];
 //        [rightLab setTextAlignment:NSTextAlignmentCenter];
         rightLab.numberOfLines = 0;
@@ -67,6 +68,17 @@
         
     }
     return self;
+}
+
+
+- (void)tableViewCellArray:(NSMutableArray*)array Index:(int)index
+{
+    NSMutableDictionary* dic = [array objectAtIndex:index];
+    leftTopLab.text = [NSString stringWithFormat:@"%@",[dic objectForKey:@"MDate"]];
+    leftDownLab.text = [NSString stringWithFormat:@"%@",[dic objectForKey:@"MSTIme"]];
+    rightLab.text = [NSString stringWithFormat:@"%@",[dic objectForKey:@"MName"]];
+    
+    
 }
 
 - (void)awakeFromNib

@@ -103,6 +103,8 @@
 		2D906BD91A1108FB009B21E0 /* icon_error_hud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D906BD71A1108FB009B21E0 /* icon_error_hud@2x.png */; };
 		2D906BDE1A110B86009B21E0 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2D906BDB1A110B86009B21E0 /* SVProgressHUD.bundle */; };
 		2D906BDF1A110B86009B21E0 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D906BDD1A110B86009B21E0 /* SVProgressHUD.m */; };
+		3B0676231A133736004C69E4 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0676221A133736004C69E4 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3B0676251A133761004C69E4 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0676241A133761004C69E4 /* libxml2.dylib */; };
 		3BA2BCAB1A0F632100D8B186 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA2BCAA1A0F632100D8B186 /* Foundation.framework */; };
 		3BA2BCAD1A0F632100D8B186 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA2BCAC1A0F632100D8B186 /* CoreGraphics.framework */; };
 		3BA2BCAF1A0F632100D8B186 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA2BCAE1A0F632100D8B186 /* UIKit.framework */; };
@@ -305,6 +307,9 @@
 		2D906BDB1A110B86009B21E0 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		2D906BDC1A110B86009B21E0 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		2D906BDD1A110B86009B21E0 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		3B0676211A133736004C69E4 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		3B0676221A133736004C69E4 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		3B0676241A133761004C69E4 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		3BA2BCA71A0F632100D8B186 /* chjapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chjapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA2BCAA1A0F632100D8B186 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3BA2BCAC1A0F632100D8B186 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -335,6 +340,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B0676251A133761004C69E4 /* libxml2.dylib in Frameworks */,
 				3BA2BCAD1A0F632100D8B186 /* CoreGraphics.framework in Frameworks */,
 				3BA2BCAF1A0F632100D8B186 /* UIKit.framework in Frameworks */,
 				3BA2BCAB1A0F632100D8B186 /* Foundation.framework in Frameworks */,
@@ -384,6 +390,7 @@
 				2D38E1771A10F2E20039F7E4 /* RequestHelp */,
 				2D3174C51A0F654400ED1599 /* AFNetworking */,
 				2D3174941A0F653B00ED1599 /* SDWebImage */,
+				3B0676201A133736004C69E4 /* xml */,
 				2D3174681A0F652B00ED1599 /* IQKeyboardManager */,
 				2D31744F1A0F652200ED1599 /* MJRefresh */,
 				2D31743E1A0F64C400ED1599 /* ViewUtils.h */,
@@ -690,6 +697,15 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		3B0676201A133736004C69E4 /* xml */ = {
+			isa = PBXGroup;
+			children = (
+				3B0676211A133736004C69E4 /* GDataXMLNode.h */,
+				3B0676221A133736004C69E4 /* GDataXMLNode.m */,
+			);
+			path = xml;
+			sourceTree = "<group>";
+		};
 		3BA2BC9E1A0F632100D8B186 = {
 			isa = PBXGroup;
 			children = (
@@ -717,6 +733,7 @@
 		3BA2BCA91A0F632100D8B186 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B0676241A133761004C69E4 /* libxml2.dylib */,
 				3BA2BCAA1A0F632100D8B186 /* Foundation.framework */,
 				3BA2BCAC1A0F632100D8B186 /* CoreGraphics.framework */,
 				3BA2BCAE1A0F632100D8B186 /* UIKit.framework */,
@@ -917,6 +934,7 @@
 				2D3174C21A0F653B00ED1599 /* UIImageView+HighlightedWebCache.m in Sources */,
 				2D3174BC1A0F653B00ED1599 /* SDWebImageDownloaderOperation.m in Sources */,
 				2D3174FB1A0F654400ED1599 /* UIAlertView+AFNetworking.m in Sources */,
+				3B0676231A133736004C69E4 /* GDataXMLNode.m in Sources */,
 				2D3174BA1A0F653B00ED1599 /* SDWebImageDecoder.m in Sources */,
 				2D906BDF1A110B86009B21E0 /* SVProgressHUD.m in Sources */,
 				2D3174BD1A0F653B00ED1599 /* SDWebImageManager.m in Sources */,
@@ -1090,6 +1108,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "chjapp/chjapp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode5.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "chjapp/chjapp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1104,6 +1127,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "chjapp/chjapp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode5.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "chjapp/chjapp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";

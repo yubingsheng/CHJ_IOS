@@ -9,12 +9,15 @@
 #import "MyViewController.h"
 #import "MJRefresh.h"
 #import "MyActivityCell.h"
+#import "GDataXMLNode.h"
 
 @interface MyViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 {
    UITableView *myTableView;
     BOOL   isShowed;
+    
+    NSMutableArray* tableMuArr;
 }
 
 @end
@@ -33,14 +36,12 @@
                            "</GetListByPage2>\n",eName,startIndex,endIndex];
     CHJRequestUrl *request=[CHJRequest GetListByPage2:urlString soapUrl:@"GetListByPage2"];
     CHJRequestoperation *operation=[[CHJRequestoperation alloc]initWithRequest:request success:^(id result){
-//        UIStoryboard *sb=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//        
-//        CustomTabbarController *vc=[sb instantiateViewControllerWithIdentifier:@"tabbar"];
-//        [self presentViewController:vc animated:YES completion:nil];
+        
         NSLog(@"成功");
         
         NSString* request = (NSString*)result;
         NSLog(@" == %@",request);
+        [self xmlString:request];
         
     } failure:^(NSError *error){
          NSLog(@"失败");
@@ -48,12 +49,52 @@
     [operation startWithHUD:@"正在加载" inView:self.view];
 }
 
-
+- (void)xmlString:(NSString*)xmlString
+{
+    
+    
+    //初始化xml文档
+    GDataXMLDocument * document = [[GDataXMLDocument alloc]initWithXMLString:xmlString options:0 error:nil];
+//    GDataXMLDocument *document = [[GDataXMLDocument alloc] initWithData:self.reciveData options:0 error:nil];
+    
+    //获取根节点
+    GDataXMLElement *rootElement = [document rootElement];
+    
+    //获取根节点的子节点，通过节点的名称
+    
+    GDataXMLElement *Body = [rootElement elementsForName:@"soap:Body"].lastObject;
+    GDataXMLElement *GetModelByENameAndEPassword2Response = [Body elementsForName:@"GetListByPage2Response"].lastObject;
+    GDataXMLElement *GetListByPage2Result = [GetModelByENameAndEPassword2Response elementsForName:@"GetListByPage2Result"].lastObject;
+    GDataXMLElement *diffgram = [GetListByPage2Result elementsForName:@"diffgr:diffgram"].lastObject;
+    GDataXMLElement *NewDataSet = [diffgram elementsForName:@"NewDataSet"].lastObject;
+    NSArray *ds = [NewDataSet elementsForName:@"ds"];
+    
+    for (GDataXMLElement * note in ds){
+        
+        
+        NSString* MName = [[note elementsForName:@"MName"].lastObject stringValue];
+        NSString* MDate = [[note elementsForName:@"MDate"].lastObject stringValue];
+        NSString* MSTIme = [[note elementsForName:@"MSTIme"].lastObject stringValue];
+        NSString* METime = [[note elementsForName:@"METime"].lastObject stringValue];
+        
+        NSMutableDictionary* dicItem = [[NSMutableDictionary alloc] init];
+        
+        [dicItem setValue:MName forKey:@"MName"];
+        [dicItem setValue:MDate forKey:@"MDate"];
+        [dicItem setValue:MSTIme forKey:@"MSTIme"];
+        [dicItem setValue:METime forKey:@"METime"];
+        
+        [tableMuArr addObject:dicItem];
+    }
+    
+    [myTableView reloadData];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets=NO;
     [self addTableView];
     [self initNavigationBar];
+    tableMuArr = [NSMutableArray array];
     
     [self GetListByPage2:@"方银儿" StartIndex:0 EndIndex:10];
     // Do any additional setup after loading the view from its nib.
@@ -124,11 +165,12 @@
 //    NSString *  locationString=[dateformatter stringFromDate:senddate];
 //    
 //    cell.textLabel.text=[NSString stringWithFormat:@"%@",locationString];
+    [cell tableViewCellArray:tableMuArr Index:indexPath.row];
     return cell;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 24;
+    return tableMuArr.count;
 }
 
 
