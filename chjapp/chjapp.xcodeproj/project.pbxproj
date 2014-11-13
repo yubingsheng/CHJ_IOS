@@ -111,6 +111,9 @@
 		2D906BDF1A110B86009B21E0 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D906BDD1A110B86009B21E0 /* SVProgressHUD.m */; };
 		3B0676231A133736004C69E4 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0676221A133736004C69E4 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3B0676251A133761004C69E4 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0676241A133761004C69E4 /* libxml2.dylib */; };
+		3B3A096E1A14DC2300A8429D /* savebtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3A096C1A14DC2300A8429D /* savebtn@2x.png */; };
+		3B3A096F1A14DC2300A8429D /* savebtnx@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3A096D1A14DC2300A8429D /* savebtnx@2x.png */; };
+		3B3A09711A14DEF500A8429D /* timerarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3A09701A14DEF500A8429D /* timerarrow@2x.png */; };
 		3BA2BCAB1A0F632100D8B186 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA2BCAA1A0F632100D8B186 /* Foundation.framework */; };
 		3BA2BCAD1A0F632100D8B186 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA2BCAC1A0F632100D8B186 /* CoreGraphics.framework */; };
 		3BA2BCAF1A0F632100D8B186 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA2BCAE1A0F632100D8B186 /* UIKit.framework */; };
@@ -127,7 +130,7 @@
 		3BA2BCD61A0F632100D8B186 /* chjappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2BCD51A0F632100D8B186 /* chjappTests.m */; };
 		3BA4EAAE1A10AFD800AB8C26 /* AddActivity ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4EAAD1A10AFD800AB8C26 /* AddActivity ViewController.m */; };
 		3BAD94561A11D379000FA9F9 /* MyActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAD94551A11D379000FA9F9 /* MyActivityCell.m */; };
-		D2B5BF6D1A14615C00C0E472 /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B5BF6C1A14615C00C0E472 /* testViewController.m */; };
+		3BE757E81A14E254001D72C3 /* QNCustomDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE757E71A14E254001D72C3 /* QNCustomDatePickerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -324,6 +327,9 @@
 		3B0676211A133736004C69E4 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		3B0676221A133736004C69E4 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		3B0676241A133761004C69E4 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		3B3A096C1A14DC2300A8429D /* savebtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "savebtn@2x.png"; sourceTree = "<group>"; };
+		3B3A096D1A14DC2300A8429D /* savebtnx@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "savebtnx@2x.png"; sourceTree = "<group>"; };
+		3B3A09701A14DEF500A8429D /* timerarrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timerarrow@2x.png"; sourceTree = "<group>"; };
 		3BA2BCA71A0F632100D8B186 /* chjapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chjapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA2BCAA1A0F632100D8B186 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3BA2BCAC1A0F632100D8B186 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -347,8 +353,8 @@
 		3BA4EAAD1A10AFD800AB8C26 /* AddActivity ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AddActivity ViewController.m"; sourceTree = "<group>"; };
 		3BAD94541A11D379000FA9F9 /* MyActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyActivityCell.h; sourceTree = "<group>"; };
 		3BAD94551A11D379000FA9F9 /* MyActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyActivityCell.m; sourceTree = "<group>"; };
-		D2B5BF6B1A14615C00C0E472 /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testViewController.h; sourceTree = "<group>"; };
-		D2B5BF6C1A14615C00C0E472 /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testViewController.m; sourceTree = "<group>"; };
+		3BE757E61A14E254001D72C3 /* QNCustomDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNCustomDatePickerView.h; sourceTree = "<group>"; };
+		3BE757E71A14E254001D72C3 /* QNCustomDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNCustomDatePickerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +385,9 @@
 		2D31742A1A0F63BB00ED1599 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3B3A09701A14DEF500A8429D /* timerarrow@2x.png */,
+				3B3A096C1A14DC2300A8429D /* savebtn@2x.png */,
+				3B3A096D1A14DC2300A8429D /* savebtnx@2x.png */,
 				2D250FE51A1390AE002B8B19 /* okicon.png */,
 				2D250FE61A1390AE002B8B19 /* personicon@2x.png */,
 				2D250FE71A1390AE002B8B19 /* thingicon@2x.png */,
@@ -640,6 +649,8 @@
 				3BAD94551A11D379000FA9F9 /* MyActivityCell.m */,
 				3BA4EAAC1A10AFD800AB8C26 /* AddActivity ViewController.h */,
 				3BA4EAAD1A10AFD800AB8C26 /* AddActivity ViewController.m */,
+				3BE757E61A14E254001D72C3 /* QNCustomDatePickerView.h */,
+				3BE757E71A14E254001D72C3 /* QNCustomDatePickerView.m */,
 			);
 			name = My;
 			sourceTree = "<group>";
@@ -660,8 +671,6 @@
 				2D31751F1A0F6C0000ED1599 /* FollowViewController.m */,
 				2D250FE21A13909E002B8B19 /* MeetingDetailsViewController.h */,
 				2D250FE31A13909E002B8B19 /* MeetingDetailsViewController.m */,
-				D2B5BF6B1A14615C00C0E472 /* testViewController.h */,
-				D2B5BF6C1A14615C00C0E472 /* testViewController.m */,
 			);
 			name = Follow;
 			sourceTree = "<group>";
@@ -891,7 +900,9 @@
 				2D906BD91A1108FB009B21E0 /* icon_error_hud@2x.png in Resources */,
 				2D31752F1A0F73DE00ED1599 /* setupx@2x.png in Resources */,
 				2D31752B1A0F717900ED1599 /* all-x@2x.png in Resources */,
+				3B3A096E1A14DC2300A8429D /* savebtn@2x.png in Resources */,
 				2D3175331A0F74D400ED1599 /* morex@2x.png in Resources */,
+				3B3A09711A14DEF500A8429D /* timerarrow@2x.png in Resources */,
 				2D3174B51A0F653B00ED1599 /* LICENSE in Resources */,
 				2D3174601A0F652200ED1599 /* MJRefresh.bundle in Resources */,
 				3BA2BCB51A0F632100D8B186 /* InfoPlist.strings in Resources */,
@@ -900,6 +911,7 @@
 				2D507F7C1A11F33900B669FC /* APP-ICON-512.png in Resources */,
 				2D507F7E1A11F3D800B669FC /* 登陆界面11@2x.jpg in Resources */,
 				2D507F781A11F2FA00B669FC /* 登录按钮.png in Resources */,
+				3B3A096F1A14DC2300A8429D /* savebtnx@2x.png in Resources */,
 				2D250FEB1A1390AE002B8B19 /* thingicon@2x.png in Resources */,
 				2D3174871A0F652B00ED1599 /* IQKeyboardManager.bundle in Resources */,
 				2D507F6D1A11B53800B669FC /* okicon.png in Resources */,
@@ -956,6 +968,7 @@
 				2D3174C01A0F653B00ED1599 /* UIImage+GIF.m in Sources */,
 				2D3174BE1A0F653B00ED1599 /* SDWebImagePrefetcher.m in Sources */,
 				2D38E17A1A10F3000039F7E4 /* CHJRequest.m in Sources */,
+				3BE757E81A14E254001D72C3 /* QNCustomDatePickerView.m in Sources */,
 				2D3174861A0F652B00ED1599 /* IQBarButtonItem.m in Sources */,
 				2D3174F61A0F654400ED1599 /* AFURLSessionManager.m in Sources */,
 				2D3174611A0F652200ED1599 /* MJRefreshBaseView.m in Sources */,
@@ -976,7 +989,6 @@
 				2D3174F41A0F654400ED1599 /* AFURLRequestSerialization.m in Sources */,
 				2D3174FF1A0F654400ED1599 /* UIRefreshControl+AFNetworking.m in Sources */,
 				2D3174641A0F652200ED1599 /* MJRefreshHeaderView.m in Sources */,
-				D2B5BF6D1A14615C00C0E472 /* testViewController.m in Sources */,
 				2D3174F11A0F654400ED1599 /* AFNetworkReachabilityManager.m in Sources */,
 				2D31748B1A0F652B00ED1599 /* IQSegmentedNextPrevious.m in Sources */,
 				2D3174901A0F652B00ED1599 /* IQUIView+IQKeyboardToolbar.m in Sources */,
@@ -1079,7 +1091,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: wang tao (YL92LZ98Y8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wang tao (YL92LZ98Y8)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1117,7 +1130,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: wang tao (YL92LZ98Y8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wang tao (YL92LZ98Y8)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1138,6 +1152,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "chjapp/chjapp-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1157,6 +1172,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "chjapp/chjapp-Prefix.pch";
 				HEADER_SEARCH_PATHS = (

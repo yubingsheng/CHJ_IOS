@@ -10,6 +10,7 @@
 #import "MJRefresh.h"
 #import "MyActivityCell.h"
 #import "GDataXMLNode.h"
+#import "AddActivity ViewController.h"
 
 @interface MyViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -146,6 +147,12 @@
 }
 -(void)addThing
 {
+    NSLog(@"添加日程");
+    AddActivity_ViewController* addVC = [[AddActivity_ViewController alloc]init];
+//    addVC.title = @"增加我和日程";
+    [self.navigationController pushViewController:addVC animated:YES];
+    
+    
     
 }
 
