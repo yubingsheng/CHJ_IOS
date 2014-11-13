@@ -127,6 +127,7 @@
 		3BA2BCD61A0F632100D8B186 /* chjappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2BCD51A0F632100D8B186 /* chjappTests.m */; };
 		3BA4EAAE1A10AFD800AB8C26 /* AddActivity ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4EAAD1A10AFD800AB8C26 /* AddActivity ViewController.m */; };
 		3BAD94561A11D379000FA9F9 /* MyActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAD94551A11D379000FA9F9 /* MyActivityCell.m */; };
+		D2B5BF6D1A14615C00C0E472 /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B5BF6C1A14615C00C0E472 /* testViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -346,6 +347,8 @@
 		3BA4EAAD1A10AFD800AB8C26 /* AddActivity ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AddActivity ViewController.m"; sourceTree = "<group>"; };
 		3BAD94541A11D379000FA9F9 /* MyActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyActivityCell.h; sourceTree = "<group>"; };
 		3BAD94551A11D379000FA9F9 /* MyActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyActivityCell.m; sourceTree = "<group>"; };
+		D2B5BF6B1A14615C00C0E472 /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testViewController.h; sourceTree = "<group>"; };
+		D2B5BF6C1A14615C00C0E472 /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -657,6 +660,8 @@
 				2D31751F1A0F6C0000ED1599 /* FollowViewController.m */,
 				2D250FE21A13909E002B8B19 /* MeetingDetailsViewController.h */,
 				2D250FE31A13909E002B8B19 /* MeetingDetailsViewController.m */,
+				D2B5BF6B1A14615C00C0E472 /* testViewController.h */,
+				D2B5BF6C1A14615C00C0E472 /* testViewController.m */,
 			);
 			name = Follow;
 			sourceTree = "<group>";
@@ -971,6 +976,7 @@
 				2D3174F41A0F654400ED1599 /* AFURLRequestSerialization.m in Sources */,
 				2D3174FF1A0F654400ED1599 /* UIRefreshControl+AFNetworking.m in Sources */,
 				2D3174641A0F652200ED1599 /* MJRefreshHeaderView.m in Sources */,
+				D2B5BF6D1A14615C00C0E472 /* testViewController.m in Sources */,
 				2D3174F11A0F654400ED1599 /* AFNetworkReachabilityManager.m in Sources */,
 				2D31748B1A0F652B00ED1599 /* IQSegmentedNextPrevious.m in Sources */,
 				2D3174901A0F652B00ED1599 /* IQUIView+IQKeyboardToolbar.m in Sources */,
