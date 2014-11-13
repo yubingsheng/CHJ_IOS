@@ -192,7 +192,9 @@
     [self.rightView addSubview:rightLable];
     
     UILabel * rightLableR = [[UILabel alloc] initWithFrame:CGRectMake(110,0,  self.rightView.frame.size.width-105, 30)];
-    rightLableR.text = @"17:55→22:00";
+    NSString *str1 =[self time:indexPath.row];
+    NSString *str2 = [self time:indexPath.row];
+    rightLableR.text = [NSString stringWithFormat:@"%@→%@",str1,str2];
     rightLableR.font = [UIFont systemFontOfSize:14.];
     rightLableR.textColor = [UIColor blueColor];
     [self.rightView addSubview:rightLableR];
@@ -226,6 +228,19 @@
 
 }
 
+
+-(NSString *)time:(NSInteger)num
+{
+    NSString *String1 =[[allArr objectAtIndex:num] objectForKey:@"MSTIme"];
+    [String1 hasPrefix:@"PT"] == 1 ?String1 =[String1 stringByReplacingOccurrencesOfString:@"PT" withString:@""] : NSLog(@"NO");
+    [String1 hasSuffix:@"H"] == 1 ?String1 =[String1 stringByReplacingOccurrencesOfString:@"H" withString:@":"] : NSLog(@"NO");
+    [String1 hasSuffix:@"M"] == 1 ?String1 =[String1 stringByReplacingOccurrencesOfString:@"M" withString:@""] : (String1 =[String1 stringByReplacingOccurrencesOfString:@"M" withString:@"00"]);
+    
+    //    [String1 hasSuffix:@""] == 1 ?String1 =[String1 stringByReplacingOccurrencesOfString:@"H" withString:@"时"] : NSLog(@"NO");
+    
+    return String1;
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
