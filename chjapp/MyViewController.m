@@ -11,6 +11,8 @@
 #import "MyActivityCell.h"
 #import "GDataXMLNode.h"
 #import "AddActivity ViewController.h"
+#import "DetailsMeetingViewController.h"
+#import "Product.h"
 
 @interface MyViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -38,10 +40,9 @@
     CHJRequestUrl *request=[CHJRequest GetListByPage2:urlString soapUrl:@"GetListByPage2"];
     CHJRequestoperation *operation=[[CHJRequestoperation alloc]initWithRequest:request success:^(id result){
         
-//        NSLog(@"成功");
-        
         NSString* request = (NSString*)result;
-//        NSLog(@" == %@",request);
+        NSLog(@" == %@",request);
+        [myTableView headerEndRefreshing];
         [self xmlString:request];
         
     } failure:^(NSError *error){
@@ -72,20 +73,8 @@
     
     for (GDataXMLElement * note in ds){
         
-        
-        NSString* MName = [[note elementsForName:@"MName"].lastObject stringValue];
-        NSString* MDate = [[note elementsForName:@"MDate"].lastObject stringValue];
-        NSString* MSTIme = [[note elementsForName:@"MSTIme"].lastObject stringValue];
-        NSString* METime = [[note elementsForName:@"METime"].lastObject stringValue];
-        
-        NSMutableDictionary* dicItem = [[NSMutableDictionary alloc] init];
-        
-        [dicItem setValue:MName forKey:@"MName"];
-        [dicItem setValue:MDate forKey:@"MDate"];
-        [dicItem setValue:MSTIme forKey:@"MSTIme"];
-        [dicItem setValue:METime forKey:@"METime"];
-        
-        [tableMuArr addObject:dicItem];
+         Product* productModel = [Product meetingModelWithXml:note];
+        [tableMuArr addObject:productModel];
     }
     
     [myTableView reloadData];
@@ -97,7 +86,7 @@
     [self initNavigationBar];
     tableMuArr = [NSMutableArray array];
     
-    [self GetListByPage2:@"方银儿" StartIndex:0 EndIndex:10];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -111,10 +100,14 @@
     [myTableView addFooterWithTarget:self action:@selector(footerRefresh)];
     [myTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.view addSubview:myTableView];
+    [myTableView headerBeginRefreshing];
 }
+
+
 -(void)headerRefresh
 {
-    [myTableView footerEndRefreshing];
+//
+    [self GetListByPage2:@"方银儿" StartIndex:0 EndIndex:10];
 }
 -(void)footerRefresh
 {
@@ -166,12 +159,7 @@
     {
         cell=[[MyActivityCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
     }
-//    NSDate *  senddate=[NSDate date];
-//    NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
-//    [dateformatter setDateFormat:@"HH:mm"];
-//    NSString *  locationString=[dateformatter stringFromDate:senddate];
-//    
-//    cell.textLabel.text=[NSString stringWithFormat:@"%@",locationString];
+
     [cell tableViewCellArray:tableMuArr Index:indexPath.row];
     return cell;
 }
@@ -188,6 +176,10 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    Product* product = [tableMuArr objectAtIndex:indexPath.row];
+    DetailsMeetingViewController* detailsVC = [[DetailsMeetingViewController alloc]init];
+    detailsVC.product = product;
+    [self.navigationController pushViewController:detailsVC animated:YES];
     
     
 }

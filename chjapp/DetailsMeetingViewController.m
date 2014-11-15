@@ -1,16 +1,15 @@
 //
-//  AddActivity ViewController.m
+//  DetailsMeetingViewController.m
 //  chjapp
 //
-//  Created by 启年信息 on 14-11-10.
+//  Created by 启年信息 on 14-11-15.
 //  Copyright (c) 2014年 chj. All rights reserved.
 //
 
-#import "AddActivity ViewController.h"
+#import "DetailsMeetingViewController.h"
 #import "QNCustomDatePickerView.h"
 
-
-@interface AddActivity_ViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface DetailsMeetingViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     QNCustomDatePickerView* datePicker;
     UITextField* textf;
@@ -26,16 +25,9 @@
 }
 @end
 
-@implementation AddActivity_ViewController
+@implementation DetailsMeetingViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize product;
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -46,6 +38,7 @@
 {
     self.tabBarController.tabBar.hidden = NO;
 }
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -55,8 +48,6 @@
     
     [self addTableView];
     
-    
-//self.hidesBottomBarWhenPushed = YES;
 }
 
 
@@ -70,7 +61,7 @@
 
 - (void)addTableView
 {
-   UITableView* myTableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64, Main_Screen_Width, Main_Screen_Height-64)];
+    UITableView* myTableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64, Main_Screen_Width, Main_Screen_Height-64)];
     myTableView.delegate=self;
     myTableView.dataSource=self;
     [myTableView setBackgroundColor:RGBCOLOR(220, 220, 220)];
@@ -122,7 +113,7 @@
     {
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
+        
         UIImageView* leftimg = [[UIImageView alloc]initWithFrame:CGRectMake(15, 22-9, 18, 18)];
         
         [leftimg setImage:[UIImage imageNamed:@"thingicon.png"]];
@@ -131,11 +122,11 @@
         
         
         
-//        cell setBackgroundColor:[UIColor ]
+        //        cell setBackgroundColor:[UIColor ]
         switch (indexPath.section) {
             case 0:{
                 textf = [[UITextField alloc]initWithFrame:CGRectMake(40, 8, Main_Screen_Width-50, 30)];
-                textf.placeholder = @"事件名称";
+                textf.placeholder = [NSString stringWithFormat:@"事件名称:%@",product.MName];
                 [cell.contentView addSubview:textf];
                 
                 
@@ -144,19 +135,19 @@
             case 1:{
                 leftButt = [UIButton buttonWithType:UIButtonTypeCustom];
                 [leftButt setFrame:CGRectMake(40, 0, (Main_Screen_Width-90)/2, 44)];
-//                [leftButt setBackgroundColor:[UIColor yellowColor]];
-                [leftButt setTitle:@"开始时间" forState:UIControlStateNormal];
+                //                [leftButt setBackgroundColor:[UIColor yellowColor]];
+//                [leftButt setTitle:@"开始时间" forState:UIControlStateNormal];
                 [leftButt setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-                [leftButt addTarget:self action:@selector(leftbutt:) forControlEvents:UIControlEventTouchUpInside];
+//                [leftButt addTarget:self action:@selector(leftbutt:) forControlEvents:UIControlEventTouchUpInside];
                 [cell.contentView addSubview:leftButt];
                 
                 leftLab1 = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, leftButt.frame.size.width, leftButt.frame.size.height/2)];
-//                [leftLab1 setText:@"开始时间"];
+                [leftLab1 setText:[NSString stringWithFormat:@"%@",product.MDate]];
                 leftLab1.font = [UIFont systemFontOfSize:12];
                 [leftButt addSubview:leftLab1];
                 
                 leftLab2 = [[UILabel alloc]initWithFrame:CGRectMake(0, leftButt.frame.size.height/2, leftButt.frame.size.width, leftButt.frame.size.height/2)];
-//                [leftLab2 setText:@"开始时间"];
+                [leftLab2 setText:[NSString stringWithFormat:@"%@",product.MSTIme]];
                 leftLab2.font = [UIFont systemFontOfSize:12];
                 [leftButt addSubview:leftLab2];
                 
@@ -167,39 +158,40 @@
                 
                 rightButt = [UIButton buttonWithType:UIButtonTypeCustom];
                 [rightButt setFrame:CGRectMake(zhongimag.frame.origin.x+zhongimag.frame.size.width+10, 0, (Main_Screen_Width-90)/2, 44)];
-//                [rightButt setBackgroundColor:[UIColor yellowColor]];
-                [rightButt setTitle:@"结束时间" forState:UIControlStateNormal];
+                //                [rightButt setBackgroundColor:[UIColor yellowColor]];
+//                [rightButt setTitle:@"结束时间" forState:UIControlStateNormal];
                 [rightButt setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-                [rightButt addTarget:self action:@selector(rightButt:) forControlEvents:UIControlEventTouchUpInside];
+//                [rightButt addTarget:self action:@selector(rightButt:) forControlEvents:UIControlEventTouchUpInside];
                 [cell.contentView addSubview:rightButt];
                 
                 rightLab1 = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, rightButt.frame.size.width, rightButt.frame.size.height/2)];
-//                [rightLab1 setText:@"开始时间"];
+                [rightLab1 setText:[NSString stringWithFormat:@"%@",product.MDate]];
                 rightLab1.font = [UIFont systemFontOfSize:12];
                 [rightButt addSubview:rightLab1];
                 
                 rightLab2 = [[UILabel alloc]initWithFrame:CGRectMake(0, rightButt.frame.size.height/2, rightButt.frame.size.width, rightButt.frame.size.height/2)];
-//                [rightLab2 setText:@"开始时间"];
+                [rightLab2 setText:[NSString stringWithFormat:@"%@",product.METime]];
                 rightLab2.font = [UIFont systemFontOfSize:12];
                 [rightButt addSubview:rightLab2];
                 
             }
                 break;
-//            case 2:{
-//                UITextView* textf = [[UITextView alloc]initWithFrame:CGRectMake(40, 5, Main_Screen_Width-50, 80)];
-//                [textf setBackgroundColor:[UIColor yellowColor]];
-//                [cell.contentView addSubview:textf];
-//                
-//                
-//                UILabel* label = [[UILabel alloc]initWithFrame:CGRectMake(5, 5, textf.frame.size.width - 20, 20)];
-//                label.text = @"添加备注";
-//                label.textColor = [UIColor lightGrayColor];
-//                [textf addSubview:label];
-//                
-//                
-//            }
-//                break;
-            case 2:
+            case 2:{
+                
+                UILabel* label = [[UILabel alloc]initWithFrame:CGRectMake(40, 5, Main_Screen_Width - 50, 30)];
+                label.textColor = [UIColor lightGrayColor];
+                [cell.contentView addSubview:label];
+                if (indexPath.row == 0) {
+                    label.text = [NSString stringWithFormat:@"参与人及部门:%@",product.MPeople];
+                }else if (indexPath.row ==1){
+                    label.text = [NSString stringWithFormat:@"会议联系人:%@",product.MLinkMan];
+                }else if (indexPath.row ==2){
+                    label.text = [NSString stringWithFormat:@"会议地点:%@",product.MWhere];
+                }
+                
+            }
+                break;
+            case 3:
                 if (indexPath.row == 0) {
                     
                     UILabel* label = [[UILabel alloc]initWithFrame:CGRectMake(40, 5, Main_Screen_Width - 50, 30)];
@@ -223,7 +215,6 @@
                     
                     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
                     
-                    
                 }
                 
                 break;
@@ -233,18 +224,19 @@
         }
         
     }
-
+    
     return cell;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 4;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
     if (section ==2) {
+        return 3;
+    }else if (section ==3) {
         return 2;
     }else{
         return 1;
@@ -254,16 +246,18 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-
+    
     return 20;
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    if (indexPath.section == 2) {
         return 44;
-    
+    }else{
+        return 44;
+    }
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -281,7 +275,7 @@
     datePicker.datePicker.tag = 10;
     
     
-//    UIDatePicker* leftdat
+    //    UIDatePicker* leftdat
 }
 
 - (void)rightButt:(UIButton*)sender
@@ -331,7 +325,7 @@
     }else{
         NSLog(@"%@  %@  %@",textf.text,leftLab1.text,rightLab1.text);
         
-//        self addActivityRequest:textf.text BeginTime:<#(NSDate *)#> EndTime:<#(NSDate *)#>
+        //        self addActivityRequest:textf.text BeginTime:<#(NSDate *)#> EndTime:<#(NSDate *)#>
     }
     
 }
@@ -340,24 +334,24 @@
 
 - (void)addActivityRequest:(NSString*)string BeginTime:(NSDate*)beginTime EndTime:(NSDate*)endTime
 {
-//    NSString* urlString = [NSString stringWithFormat:@"<GetListByPage2 xmlns=\"http://www.woowei.cn/\">\n"
-//                           "<EName>%@</EName>\n"
-//                           "<orderby></orderby>\n"
-//                           "<startIndex>%d</startIndex>\n"
-//                           "<endIndex>%d</endIndex>\n"
-//                           "</GetListByPage2>\n",eName,startIndex,endIndex];
-//    CHJRequestUrl *request=[CHJRequest GetListByPage2:urlString soapUrl:@"GetListByPage2"];
-//    CHJRequestoperation *operation=[[CHJRequestoperation alloc]initWithRequest:request success:^(id result){
-//        
-//        NSString* request = (NSString*)result;
-//        NSLog(@" == %@",request);
-//     
-//        [self xmlString:request];
-//        
-//    } failure:^(NSError *error){
-//        NSLog(@"失败");
-//    }];
-//    [operation startWithHUD:@"正在加载" inView:self.view];
+    //    NSString* urlString = [NSString stringWithFormat:@"<GetListByPage2 xmlns=\"http://www.woowei.cn/\">\n"
+    //                           "<EName>%@</EName>\n"
+    //                           "<orderby></orderby>\n"
+    //                           "<startIndex>%d</startIndex>\n"
+    //                           "<endIndex>%d</endIndex>\n"
+    //                           "</GetListByPage2>\n",eName,startIndex,endIndex];
+    //    CHJRequestUrl *request=[CHJRequest GetListByPage2:urlString soapUrl:@"GetListByPage2"];
+    //    CHJRequestoperation *operation=[[CHJRequestoperation alloc]initWithRequest:request success:^(id result){
+    //
+    //        NSString* request = (NSString*)result;
+    //        NSLog(@" == %@",request);
+    //
+    //        [self xmlString:request];
+    //        
+    //    } failure:^(NSError *error){
+    //        NSLog(@"失败");
+    //    }];
+    //    [operation startWithHUD:@"正在加载" inView:self.view];
     
     
     
@@ -373,9 +367,7 @@
     [alert show];
 }
 
-
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -384,8 +376,7 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }

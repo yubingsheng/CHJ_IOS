@@ -28,6 +28,8 @@
     CHJRequestoperation *operation=[[CHJRequestoperation alloc]initWithRequest:request success:^(id result){
         UIStoryboard *sb=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
         
+        NSLog(@"登录数据 == %@",(NSString*)result);
+        
         CustomTabbarController *vc=[sb instantiateViewControllerWithIdentifier:@"tabbar"];
         [self presentViewController:vc animated:YES completion:nil];
         

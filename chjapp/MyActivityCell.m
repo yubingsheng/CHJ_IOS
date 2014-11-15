@@ -7,6 +7,7 @@
 //
 
 #import "MyActivityCell.h"
+#import "Product.h"
 
 @implementation MyActivityCell
 {
@@ -73,10 +74,12 @@
 
 - (void)tableViewCellArray:(NSMutableArray*)array Index:(int)index
 {
-    NSMutableDictionary* dic = [array objectAtIndex:index];
-    leftTopLab.text = [NSString stringWithFormat:@"%@",[dic objectForKey:@"MDate"]];
-    leftDownLab.text = [NSString stringWithFormat:@"%@",[dic objectForKey:@"MSTIme"]];
-    rightLab.text = [NSString stringWithFormat:@"%@",[dic objectForKey:@"MName"]];
+    Product* model = [array objectAtIndex:index];
+    
+    leftTopLab.text = model.MDate;
+    leftDownLab.text = model.MSTIme;
+    rightLab.text = model.MName;
+
 }
 
 - (void)awakeFromNib

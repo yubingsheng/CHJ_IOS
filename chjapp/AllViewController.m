@@ -9,6 +9,8 @@
 #import "AllViewController.h"
 #import "GDataXMLNode.h"
 #import "MyActivityCell.h"
+#import "Product.h"
+
 @interface AllViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSMutableArray *_meetings;
@@ -148,19 +150,8 @@
     for (GDataXMLElement * note in ds){
         
         
-        NSString* MName = [[note elementsForName:@"MName"].lastObject stringValue];
-        NSString* MDate = [[note elementsForName:@"MDate"].lastObject stringValue];
-        NSString* MSTIme = [[note elementsForName:@"MSTIme"].lastObject stringValue];
-        NSString* METime = [[note elementsForName:@"METime"].lastObject stringValue];
-        
-        NSMutableDictionary* dicItem = [[NSMutableDictionary alloc] init];
-        
-        [dicItem setValue:MName forKey:@"MName"];
-        [dicItem setValue:MDate forKey:@"MDate"];
-        [dicItem setValue:MSTIme forKey:@"MSTIme"];
-        [dicItem setValue:METime forKey:@"METime"];
-        
-        [_meetings addObject:dicItem];
+        Product* productModel = [Product meetingModelWithXml:note];
+        [_meetings addObject:productModel];
     }
     
     [_tableView reloadData];

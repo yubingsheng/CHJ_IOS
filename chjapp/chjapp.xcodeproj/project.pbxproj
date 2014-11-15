@@ -111,6 +111,7 @@
 		2D906BDF1A110B86009B21E0 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D906BDD1A110B86009B21E0 /* SVProgressHUD.m */; };
 		3B0676231A133736004C69E4 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0676221A133736004C69E4 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3B0676251A133761004C69E4 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0676241A133761004C69E4 /* libxml2.dylib */; };
+		3B173C851A1723E9002B38A7 /* DetailsMeetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B173C841A1723E9002B38A7 /* DetailsMeetingViewController.m */; };
 		3B3A096E1A14DC2300A8429D /* savebtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3A096C1A14DC2300A8429D /* savebtn@2x.png */; };
 		3B3A096F1A14DC2300A8429D /* savebtnx@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3A096D1A14DC2300A8429D /* savebtnx@2x.png */; };
 		3B3A09711A14DEF500A8429D /* timerarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3A09701A14DEF500A8429D /* timerarrow@2x.png */; };
@@ -327,6 +328,8 @@
 		3B0676211A133736004C69E4 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		3B0676221A133736004C69E4 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		3B0676241A133761004C69E4 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		3B173C831A1723E9002B38A7 /* DetailsMeetingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsMeetingViewController.h; sourceTree = "<group>"; };
+		3B173C841A1723E9002B38A7 /* DetailsMeetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsMeetingViewController.m; sourceTree = "<group>"; };
 		3B3A096C1A14DC2300A8429D /* savebtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "savebtn@2x.png"; sourceTree = "<group>"; };
 		3B3A096D1A14DC2300A8429D /* savebtnx@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "savebtnx@2x.png"; sourceTree = "<group>"; };
 		3B3A09701A14DEF500A8429D /* timerarrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timerarrow@2x.png"; sourceTree = "<group>"; };
@@ -649,6 +652,8 @@
 				3BAD94551A11D379000FA9F9 /* MyActivityCell.m */,
 				3BA4EAAC1A10AFD800AB8C26 /* AddActivity ViewController.h */,
 				3BA4EAAD1A10AFD800AB8C26 /* AddActivity ViewController.m */,
+				3B173C831A1723E9002B38A7 /* DetailsMeetingViewController.h */,
+				3B173C841A1723E9002B38A7 /* DetailsMeetingViewController.m */,
 				3BE757E61A14E254001D72C3 /* QNCustomDatePickerView.h */,
 				3BE757E71A14E254001D72C3 /* QNCustomDatePickerView.m */,
 			);
@@ -954,6 +959,7 @@
 				2D507F821A11F50700B669FC /* LeftMeunView.m in Sources */,
 				2D3174F51A0F654400ED1599 /* AFURLResponseSerialization.m in Sources */,
 				2D3174651A0F652200ED1599 /* UIScrollView+MJExtension.m in Sources */,
+				3B173C851A1723E9002B38A7 /* DetailsMeetingViewController.m in Sources */,
 				2D4D8FFB1A10AEA1009B5CE4 /* Product.m in Sources */,
 				2D38E1801A10F4B90039F7E4 /* CHJRequestoperation.m in Sources */,
 				2D3174921A0F652B00ED1599 /* LICENSE.md in Sources */,
