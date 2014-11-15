@@ -50,7 +50,7 @@
          if ([data length]>0 && error==nil)
          {
              NSString *html=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-//             DLog(@"result===%@",html);
+             DLog(@"result===%@",html);
         
              [SVProgressHUD showSuccessWithStatus:[NSString stringWithFormat:@"%@成功",title] duration:1.5];
              if (self.success) {

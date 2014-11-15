@@ -9,13 +9,20 @@
 #import "AllViewController.h"
 #import "GDataXMLNode.h"
 #import "MyActivityCell.h"
+
+#import "AddActivity ViewController.h"
+#import "DayTableViewController.h"
+
 #import "Product.h"
+
 
 @interface AllViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSMutableArray *_meetings;
+    NSInteger _tableTag;
 }
 @property (strong,nonatomic)UITableView *tableView;
+@property (strong,nonatomic)DayTableViewController *dayViewControl;
 @end
 
 @implementation AllViewController
@@ -33,19 +40,41 @@
 #pragma mark -addViews
 -(void)addTableView
 {
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64, Main_Screen_Width, Main_Screen_Height-64-50)];
-    _tableView.delegate=self;
-    _tableView.dataSource=self;
-    [_tableView addHeaderWithTarget:self action:@selector(headerRefresh)];
-    [_tableView addFooterWithTarget:self action:@selector(footerRefresh)];
-    [self.view addSubview:_tableView];
-    [_tableView headerBeginRefreshing];
+    if (!_tableView)
+    {
+        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64, Main_Screen_Width, Main_Screen_Height-64-50)];
+        _tableView.tag=0;
+        _tableView.delegate=self;
+        _tableView.dataSource=self;
+        [_tableView addHeaderWithTarget:self action:@selector(headerRefresh)];
+        [_tableView addFooterWithTarget:self action:@selector(footerRefresh)];
+        [self.view addSubview:_tableView];
+    }
+    else
+    {
+        self.tableView.hidden=NO;
+    }
+       [_tableView headerBeginRefreshing];
 }
+-(void)addDayTable:(NSArray*)array
+{
+    if (!_dayViewControl)
+    {
+        _dayViewControl=[[DayTableViewController alloc]init];
+        [self.view addSubview:_dayViewControl.tableView];
+    }
+    else
+    {
+        _dayViewControl.tableView.hidden=NO;
+    }
+    [_dayViewControl  dayTableReloadData:array];
+}
+
 -(void)headerRefresh
 {
     [self getAllMeetingsBystartIndex:0 endIndext:10];
-    
 }
+
 -(void)footerRefresh
 {
     [_tableView headerEndRefreshing];
@@ -75,11 +104,18 @@
         [app hidedLeftView];
     }
 }
+-(void)tableViewChooseed:(NSString*)index
+{
+    _tableTag=index.integerValue;
+    if (_tableTag==0)
+    {
+        self.tableView.hidden=NO;
+    }
+}
 -(void)addThing
 {
     
 }
-
 #pragma mark- TableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

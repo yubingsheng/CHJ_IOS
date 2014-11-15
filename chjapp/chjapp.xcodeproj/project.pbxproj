@@ -109,6 +109,12 @@
 		2D906BD91A1108FB009B21E0 /* icon_error_hud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D906BD71A1108FB009B21E0 /* icon_error_hud@2x.png */; };
 		2D906BDE1A110B86009B21E0 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2D906BDB1A110B86009B21E0 /* SVProgressHUD.bundle */; };
 		2D906BDF1A110B86009B21E0 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D906BDD1A110B86009B21E0 /* SVProgressHUD.m */; };
+		2DB4982C1A1727EC0058E407 /* DayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4982B1A1727EC0058E407 /* DayTableViewController.m */; };
+		2DB498311A17291A0058E407 /* DayTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4982F1A17291A0058E407 /* DayTableCell.m */; };
+		2DB498321A17291A0058E407 /* DayTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB498301A17291A0058E407 /* DayTableCell.xib */; };
+		2DB498361A1733DD0058E407 /* WeekTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB498351A1733DD0058E407 /* WeekTableViewController.m */; };
+		2DB4983A1A1735120058E407 /* WeekTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB498381A1735120058E407 /* WeekTableCell.m */; };
+		2DB4983B1A1735120058E407 /* WeekTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB498391A1735120058E407 /* WeekTableCell.xib */; };
 		3B0676231A133736004C69E4 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0676221A133736004C69E4 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3B0676251A133761004C69E4 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0676241A133761004C69E4 /* libxml2.dylib */; };
 		3B173C851A1723E9002B38A7 /* DetailsMeetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B173C841A1723E9002B38A7 /* DetailsMeetingViewController.m */; };
@@ -325,6 +331,16 @@
 		2D906BDB1A110B86009B21E0 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		2D906BDC1A110B86009B21E0 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		2D906BDD1A110B86009B21E0 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		2DB4982A1A1727EC0058E407 /* DayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTableViewController.h; sourceTree = "<group>"; };
+		2DB4982B1A1727EC0058E407 /* DayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayTableViewController.m; sourceTree = "<group>"; };
+		2DB4982E1A17291A0058E407 /* DayTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTableCell.h; sourceTree = "<group>"; };
+		2DB4982F1A17291A0058E407 /* DayTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayTableCell.m; sourceTree = "<group>"; };
+		2DB498301A17291A0058E407 /* DayTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayTableCell.xib; sourceTree = "<group>"; };
+		2DB498341A1733DD0058E407 /* WeekTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekTableViewController.h; sourceTree = "<group>"; };
+		2DB498351A1733DD0058E407 /* WeekTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekTableViewController.m; sourceTree = "<group>"; };
+		2DB498371A1735120058E407 /* WeekTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekTableCell.h; sourceTree = "<group>"; };
+		2DB498381A1735120058E407 /* WeekTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekTableCell.m; sourceTree = "<group>"; };
+		2DB498391A1735120058E407 /* WeekTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekTableCell.xib; sourceTree = "<group>"; };
 		3B0676211A133736004C69E4 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		3B0676221A133736004C69E4 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		3B0676241A133761004C69E4 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -614,6 +630,7 @@
 		2D31750F1A0F69B600ED1599 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2DB498261A1727150058E407 /* TableViews */,
 				2D507F7F1A11F4D500B669FC /* LeftMenuView */,
 			);
 			name = Views;
@@ -734,6 +751,39 @@
 				2D906BDD1A110B86009B21E0 /* SVProgressHUD.m */,
 			);
 			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		2DB498261A1727150058E407 /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				2DB4982D1A1728CA0058E407 /* DayTable */,
+				2DB498331A1733990058E407 /* WeekTable */,
+			);
+			name = TableViews;
+			sourceTree = "<group>";
+		};
+		2DB4982D1A1728CA0058E407 /* DayTable */ = {
+			isa = PBXGroup;
+			children = (
+				2DB4982A1A1727EC0058E407 /* DayTableViewController.h */,
+				2DB4982B1A1727EC0058E407 /* DayTableViewController.m */,
+				2DB4982E1A17291A0058E407 /* DayTableCell.h */,
+				2DB4982F1A17291A0058E407 /* DayTableCell.m */,
+				2DB498301A17291A0058E407 /* DayTableCell.xib */,
+			);
+			name = DayTable;
+			sourceTree = "<group>";
+		};
+		2DB498331A1733990058E407 /* WeekTable */ = {
+			isa = PBXGroup;
+			children = (
+				2DB498341A1733DD0058E407 /* WeekTableViewController.h */,
+				2DB498351A1733DD0058E407 /* WeekTableViewController.m */,
+				2DB498371A1735120058E407 /* WeekTableCell.h */,
+				2DB498381A1735120058E407 /* WeekTableCell.m */,
+				2DB498391A1735120058E407 /* WeekTableCell.xib */,
+			);
+			name = WeekTable;
 			sourceTree = "<group>";
 		};
 		3B0676201A133736004C69E4 /* xml */ = {
@@ -912,6 +962,7 @@
 				2D3174601A0F652200ED1599 /* MJRefresh.bundle in Resources */,
 				3BA2BCB51A0F632100D8B186 /* InfoPlist.strings in Resources */,
 				2D3175311A0F744B00ED1599 /* other-x@2x.png in Resources */,
+				2DB498321A17291A0058E407 /* DayTableCell.xib in Resources */,
 				2D507F731A11B53800B669FC /* SetLock_TableViewController.xib in Resources */,
 				2D507F7C1A11F33900B669FC /* APP-ICON-512.png in Resources */,
 				2D507F7E1A11F3D800B669FC /* 登陆界面11@2x.jpg in Resources */,
@@ -931,6 +982,7 @@
 				2D250FE11A139087002B8B19 /* 顶部logo.png in Resources */,
 				2D3175351A0F757100ED1599 /* addx@2x.png in Resources */,
 				2D3174F71A0F654400ED1599 /* LICENSE in Resources */,
+				2DB4983B1A1735120058E407 /* WeekTableCell.xib in Resources */,
 				2D250FEA1A1390AE002B8B19 /* personicon@2x.png in Resources */,
 				2D507F7A1A11F30200B669FC /* 顶部logo.png in Resources */,
 				3BA2BCBE1A0F632100D8B186 /* Main.storyboard in Resources */,
@@ -972,11 +1024,13 @@
 				2D507F6E1A11B53800B669FC /* SetAbout_ViewController.m in Sources */,
 				2D3174B61A0F653B00ED1599 /* README.md in Sources */,
 				2D3174C01A0F653B00ED1599 /* UIImage+GIF.m in Sources */,
+				2DB498361A1733DD0058E407 /* WeekTableViewController.m in Sources */,
 				2D3174BE1A0F653B00ED1599 /* SDWebImagePrefetcher.m in Sources */,
 				2D38E17A1A10F3000039F7E4 /* CHJRequest.m in Sources */,
 				3BE757E81A14E254001D72C3 /* QNCustomDatePickerView.m in Sources */,
 				2D3174861A0F652B00ED1599 /* IQBarButtonItem.m in Sources */,
 				2D3174F61A0F654400ED1599 /* AFURLSessionManager.m in Sources */,
+				2DB4982C1A1727EC0058E407 /* DayTableViewController.m in Sources */,
 				2D3174611A0F652200ED1599 /* MJRefreshBaseView.m in Sources */,
 				2D3174B91A0F653B00ED1599 /* SDWebImageCompat.m in Sources */,
 				2D3174BB1A0F653B00ED1599 /* SDWebImageDownloader.m in Sources */,
@@ -1020,6 +1074,7 @@
 				2D3174FC1A0F654400ED1599 /* UIButton+AFNetworking.m in Sources */,
 				2D3174661A0F652200ED1599 /* UIScrollView+MJRefresh.m in Sources */,
 				2D3174671A0F652200ED1599 /* UIView+MJExtension.m in Sources */,
+				2DB4983A1A1735120058E407 /* WeekTableCell.m in Sources */,
 				2D3174631A0F652200ED1599 /* MJRefreshFooterView.m in Sources */,
 				2D3174911A0F652B00ED1599 /* IQUIWindow+Hierarchy.m in Sources */,
 				2D3174351A0F642000ED1599 /* CommonUI.m in Sources */,
@@ -1030,6 +1085,7 @@
 				2D3174F31A0F654400ED1599 /* AFURLConnectionOperation.m in Sources */,
 				2D31751C1A0F6B7D00ED1599 /* AllViewController.m in Sources */,
 				2D3174C31A0F653B00ED1599 /* UIImageView+WebCache.m in Sources */,
+				2DB498311A17291A0058E407 /* DayTableCell.m in Sources */,
 				2D507F761A11B53800B669FC /* SettingTableViewController.m in Sources */,
 				2D3174B81A0F653B00ED1599 /* SDImageCache.m in Sources */,
 			);

@@ -53,7 +53,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (_cellAction)
     {
-        _cellAction([_titles objectAtIndex:indexPath.row]);
+        _cellAction([NSString stringWithFormat:@"%ld",(long)indexPath.row]);
     }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
