@@ -1225,6 +1225,7 @@
 				INFOPLIST_FILE = "chjapp/chjapp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "36b89cbb-e156-4e9d-819f-d8c921751081";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1245,6 +1246,7 @@
 				INFOPLIST_FILE = "chjapp/chjapp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "36b89cbb-e156-4e9d-819f-d8c921751081";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
