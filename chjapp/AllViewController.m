@@ -12,7 +12,7 @@
 
 #import "AddActivity ViewController.h"
 #import "DayTableViewController.h"
-
+#import "WeekTableViewController.h"
 #import "Product.h"
 
 
@@ -20,9 +20,11 @@
 {
     NSMutableArray *_meetings;
     NSInteger _tableTag;
+    NSString *_strWhere;
 }
 @property (strong,nonatomic)UITableView *tableView;
 @property (strong,nonatomic)DayTableViewController *dayViewControl;
+@property (strong,nonatomic)WeekTableViewController *weekViewControl;
 @end
 
 @implementation AllViewController
@@ -33,6 +35,7 @@
     {
         _meetings=[[NSMutableArray alloc]init];
     }
+    _strWhere=@"";
     [self addTableView];
     [self initNavigationBar];
     // Do any additional setup after loading the view.
@@ -54,22 +57,79 @@
     {
         self.tableView.hidden=NO;
     }
-       [_tableView headerBeginRefreshing];
+    _strWhere=@"and 1=1";
+    [_tableView headerBeginRefreshing];
 }
--(void)addDayTable:(NSArray*)array
+-(void)addDayTable
 {
     if (!_dayViewControl)
     {
         _dayViewControl=[[DayTableViewController alloc]init];
+        _dayViewControl.tableView.frame=CGRectMake(0, 64, Main_Screen_Width, Main_Screen_Height-64-50);
         [self.view addSubview:_dayViewControl.tableView];
     }
     else
     {
         _dayViewControl.tableView.hidden=NO;
     }
-    [_dayViewControl  dayTableReloadData:array];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    //设定时间格式,这里可以设置成自己需要的格式
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    //用[NSDate date]可以获取系统当前时间
+    NSString *currentDateStr = [dateFormatter stringFromDate:[NSDate date]];
+    //输出格式为：2010-10-27 10:22:13
+    _strWhere=[NSString stringWithFormat:@"and T.MDate='%@'",currentDateStr];
+     [self getAllMeetingsBystartIndex:1 endIndext:10];
+//    [_dayViewControl  dayTableReloadData:_meetings];
 }
+-(void)addWeekTable
+{
+    if (!_weekViewControl)
+    {
+        _weekViewControl=[[WeekTableViewController alloc]init];
+        _weekViewControl.tableView.frame=CGRectMake(0, 64, Main_Screen_Width, Main_Screen_Height-64-50);
+        [self.view addSubview:_weekViewControl.tableView];
+    }
+    else
+    {
+        _weekViewControl.tableView.hidden=NO;
+    }
+    NSArray * arrWeek=[NSArray arrayWithObjects:@"星期日",@"星期一",@"星期二",@"星期三",@"星期四",@"星期五",@"星期六",
+                       nil];
+    NSDate *date = [NSDate date];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    NSInteger unitFlags = NSYearCalendarUnit |
+    NSMonthCalendarUnit |
+    NSDayCalendarUnit |
+    NSWeekdayCalendarUnit |
+    NSHourCalendarUnit |
+    NSMinuteCalendarUnit |
+    NSSecondCalendarUnit;
+    comps =[calendar components:(NSWeekCalendarUnit | NSWeekdayCalendarUnit |NSWeekdayOrdinalCalendarUnit)
+                       fromDate:date];
+    NSInteger week = [comps week];
+    NSInteger year=[comps year];
+    NSInteger month = [comps month];
+    NSInteger day = [comps day];
+    
+    _strWhere=[NSString stringWithFormat:@"and T.WTID=47"];
+    [self getAllMeetingsBystartIndex:1 endIndext:10];
 
+    [_weekViewControl weekTableReloadData:_meetings];
+}
+-(void)hideTable:(NSInteger)index
+{
+    NSArray *tmpTables=[NSArray arrayWithObjects:_tableView,_dayViewControl,_weekViewControl, nil];
+    for (int i=0; i<tmpTables.count; i++)
+    {
+        UITableView *table=[tmpTables objectAtIndex:i];
+        if (i!=index)
+        {
+            table.hidden=YES;
+        }
+    }
+}
 -(void)headerRefresh
 {
     [self getAllMeetingsBystartIndex:0 endIndext:10];
@@ -91,9 +151,12 @@
 }
 -(void)leftMeun
 {
+    __block AllViewController *vc=self;
     AppDelegate *app=(AppDelegate*)[[UIApplication sharedApplication]delegate];
     app.LeftView.cellAction=^(id obj){
         DLog(@"obj==%@",obj);
+        [vc tableViewChooseed:obj];
+        [app hidedLeftView];
     };
     if (app.LeftView.tag==0)
     {
@@ -109,7 +172,15 @@
     _tableTag=index.integerValue;
     if (_tableTag==0)
     {
-        self.tableView.hidden=NO;
+        [self addTableView];
+    }
+    else if (_tableTag==1)
+    {
+        [self addDayTable];
+    }
+    else if (_tableTag==2)
+    {
+        [self addWeekTable];
     }
 }
 -(void)addThing
@@ -148,14 +219,14 @@
                            "<orderby></orderby>\n"
                            "<startIndex>%ld</startIndex>\n"
                            "<endIndex>%ld</endIndex>\n"
-                           "</GetListByPage3>\n",@"",(long)startIndex,(long)endIndex];
+                           "</GetListByPage3>\n",_strWhere,(long)startIndex,(long)endIndex];
     CHJRequestUrl *request=[CHJRequest GetListByPage2:urlString soapUrl:@"GetListByPage3"];
     CHJRequestoperation *operation=[[CHJRequestoperation alloc]initWithRequest:request success:^(id result){
         
        [_tableView footerEndRefreshing];
         [_tableView headerEndRefreshing];
         NSString* request = (NSString*)result;
-         DLog(@" response== %@",request);
+         //DLog(@" response== %@",request);
         [self xmlString:request];
         
     } failure:^(NSError *error){
